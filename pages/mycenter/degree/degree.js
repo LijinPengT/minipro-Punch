@@ -1,16 +1,11 @@
-// pages/mycenter/index/index.js
+// pages/mycenter/degree/degree.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    checked: false,
-    degree: "最轻量级选手",
 
-  },
-  onChange(event) {
-    this.setData({checked: event.detail});
   },
 
   /**

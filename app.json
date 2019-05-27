@@ -5,7 +5,8 @@
     "pages/mycenter/index/index",
     "pages/mycenter/help/help",
     "pages/mycenter/done/done",
-    "pages/mycenter/about/about"
+    "pages/mycenter/about/about",
+    "pages/mycenter/degree/degree"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,24 +17,26 @@
   "tabBar": {
     "color": "#707070",
     "selectedColor": "#F35458",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "代办",
-      "iconPath": "images/slices/pending.png",
-      "selectedIconPath": "images/slices/pending.png"
-    },
-    {
-      "pagePath": "pages/punch/punch",
-      "text": "打卡",
-      "iconPath": "images/slices/punch.png",
-      "selectedIconPath": "images/slices/punch.png"
-    },
-    {
-      "pagePath": "pages/mycenter/index/index",
-      "text": "我的",
-      "iconPath": "images/slices/punch.png",
-      "selectedIconPath": "images/slices/punch.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "代办",
+        "iconPath": "images/slices/pending.png",
+        "selectedIconPath": "images/slices/pending.png"
+      },
+      {
+        "pagePath": "pages/punch/punch",
+        "text": "打卡",
+        "iconPath": "images/slices/punch.png",
+        "selectedIconPath": "images/slices/punch.png"
+      },
+      {
+        "pagePath": "pages/mycenter/index/index",
+        "text": "我的",
+        "iconPath": "images/slices/punch.png",
+        "selectedIconPath": "images/slices/punch.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {

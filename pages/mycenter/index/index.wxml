@@ -3,12 +3,29 @@
 
 <view class='userImg'></view>
 
-<view class="myDegree"></view>
+
+<van-cell value="{{ degree }}" icon="fire-o" is-link url="/pages/mycenter/degree/degree">
+  <view slot="title">
+    <view class="van-cell-text">我的等级</view>
+    <van-tag type="danger">{{status}}</van-tag>
+  </view>
+</van-cell>
 
 <view class="menuItems">
 
-<view class="item1">开启提醒</view>
-<view class="item2">已完成</view>
-<view class="item3">关于我们</view>
-<view class="item4">帮助与反馈</view>
+<van-switch-cell
+  title="开启提醒"
+  checked="{{ checked }}"
+  bind:change="onChange"
+  />
+<van-cell title="已完成" is-link url="/pages/mycenter/done/done"/>
 </view>
+
+<view class="menuItems">
+
+<van-cell title="关于我们" is-link url="/pages/mycenter/about/about"/>
+<van-cell title="帮助与反馈" is-link url="/pages/mycenter/help/help"/>
+
+</view>
+
+

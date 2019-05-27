@@ -1,5 +1,5 @@
 <!--pages/mycenter/help/help.wxml-->
-<image class='bgimg' src='../../../images/slices/bgimg1'></image>
+<image class='bgimg' src='../../../images/slices/bgimg1.png'></image>
 <view class='head'>写下您对我们的意见吧！</view>
 <textarea></textarea>
 <van-button type='primary'>提交</van-button>
