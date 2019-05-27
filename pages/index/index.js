@@ -12,21 +12,20 @@ Page({
   },
   onChange(event) {
     console.log(event.detail)
-    num = event.detail
   },
   toIndex: function() {
-    wx.navigateTo({
-      url: '../index/index'
+    wx.switchTab({
+      url: '../ index / index',
     })
   },
   toPunch: function() {
-    wx.navigateTo({
-      url: '../punch/punch'
-    })
+   wx.switchTab({
+     url: '../punch/punch',
+   })
   },
   toMyCenter: function() {
-    wx.navigateTo({
-      url: '../mycenter/index/index'
+    wx.switchTab({
+      url: '../mycenter/index/index',
     })
   },
   onLoad: function () {

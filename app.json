@@ -13,6 +13,28 @@
     "navigationBarTitleText": "Punch",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#F35458",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "代办",
+      "iconPath": "images/slices/pending.png",
+      "selectedIconPath": "images/slices/pending.png"
+    },
+    {
+      "pagePath": "pages/punch/punch",
+      "text": "打卡",
+      "iconPath": "images/slices/punch.png",
+      "selectedIconPath": "images/slices/punch.png"
+    },
+    {
+      "pagePath": "pages/mycenter/index/index",
+      "text": "我的",
+      "iconPath": "images/slices/punch.png",
+      "selectedIconPath": "images/slices/punch.png"
+    }]
+  },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "van-cell": "dist/cell/index",
@@ -20,8 +42,6 @@
     "van-button": "dist/button/index",
     "van-icon": "dist/icon/index",
     "van-switch-cell": "dist/switch-cell/index",
-    "van-tabbar": "dist/tabbar/index",
-    "van-tabbar-item": "dist/tabbar-item/index",
     "van-tab": "dist/tab/index",
     "van-tabs": "dist/tabs/index",
     "van-nav-bar": "dist/nav-bar/index"
