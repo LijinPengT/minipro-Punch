@@ -1,2 +1,14 @@
 <!--pages/mycenter/index/index.wxml-->
 <image src='../../../images/slices/bgimg1.png'></image>
+
+<view class='userImg'></view>
+
+<view class="myDegree"></view>
+
+<view class="menuItems">
+
+<view class="item1">开启提醒</view>
+<view class="item2">已完成</view>
+<view class="item3">关于我们</view>
+<view class="item4">帮助与反馈</view>
+</view>

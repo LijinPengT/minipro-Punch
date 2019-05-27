@@ -1,2 +1,18 @@
 <!--pages/mycenter/about/about.wxml-->
-<text>pages/mycenter/about/about.wxml</text>
+<view class="head">关于我们</view>
+
+<view class="headIcon">
+<image class="miniIcon"></image>
+<image class="flyIcon"></image>
+</view>
+
+<view class="intro">
+<view class="text">中国矿业大学翔工作室</view>
+<view calss="flyLink">https://atcumt.com/</view>
+</view>
+
+<view class='introText'>
+<text>翔工作室，成立于2000年10月，19年以来一直负责翔工作室的运营维护，并为矿大师生设计开发了矿友，导航站，矿大头像戳，学工处官网，矿大文库,易班场地申请系统等众多互联网产品。是矿大卓越的科技、媒体和通信解决方案的提供者。 我们的成员来自全校多个学院，十几年来老成员遍布百度，阿里，京东，今日头条，小米等各个互联网公司，这里拥有矿大学生群体中最好的设计与技术团队。在通往梦想的道路上，我们一起飞翔！</text>
+</view>
+
+<image class='qrCode' src=''><text>联系我们</text></image>

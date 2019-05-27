@@ -4,15 +4,29 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello Punch',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    active: 0,
+    icon: {
+      normal: '../../images/slices/pending.png',
+      active: '../../images/slices/pending.png'
+    },
   },
-  //事件处理函数
-  bindViewTap: function() {
+  onChange(event) {
+    console.log(event.detail)
+    num = event.detail
+  },
+  toIndex: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../index/index'
+    })
+  },
+  toPunch: function() {
+    wx.navigateTo({
+      url: '../punch/punch'
+    })
+  },
+  toMyCenter: function() {
+    wx.navigateTo({
+      url: '../mycenter/index/index'
     })
   },
   onLoad: function () {
