@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!--pages/mycenter/index/index.wxml-->
 <image src='../../../images/slices/bgimg1.png'></image>
 
@@ -7,4 +8,30 @@
 
 
 
+<!-- 背景图片 -->
+<view class='user'>
+  <image class='user-bg' src='../../../images/slices/bgimg1.png'></image>
+  <image class='user-head' src='{{}}'></image>
+  <view class=' cu-block width80 deg-position'>
+    <view class='degree ' >我的等级</view>
+    <view class="deg-select">{{degree}}</view>
+  </view>
+</view>
+<view class="cu-form-group margin-top">
+		<view class="title">开启提醒</view>
+		<switch></switch>
+</view>
+<view class='cu-form-group'>
+  <view>已完成</view>
+  <view><image class='gt' src='../../../images/slices/enter.png'></image></view>
+</view>
+<view class="cu-form-group margin-top">
+		<view class="title">关于我们</view>
+</view>
+<view class='cu-form-group margin-bottom'>
+  <view>帮助</view>
+</view>
+<view class='breath'>
+>>>>>>> Stashed changes
 
+</view>

@@ -1,1 +1,56 @@
-/* pages/mycenter/index/index.wxss */
+/* ------背景图片 */
+.user{
+  position: relative;
+  overflow: hidden;
+}
+.user-bg{
+  width: 100%;
+  height: 400rpx;
+}
+.user-head{
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  display: inline-block;
+  /* 居中 */
+  position: absolute;
+  left: 50%;transform: translate(-50%,-70%);
+  top: 50%;
+  /* 居中 */
+  background: #fff;
+}
+/* -------背景图片 */
+.deg-position{
+  transform: translateY(-50%);
+}
+.degree{
+  flex: 1;
+}
+.deg-select{
+  flex: 1;
+}
+.margin-top{
+  margin-top:30rpx;
+}
+.gt{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 30rpx;
+}
+/* -------*/
+
+.cu-block{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 30rpx 50rpx 30rpx 50rpx;
+  
+}
+.width80{
+  width: 80%;
+  border-radius: 10rpx;
+}
+

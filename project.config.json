@@ -39,12 +39,28 @@
 			"list": []
 		},
 		"miniprogram": {
+<<<<<<< Updated upstream
 			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "help",
 					"pathName": "pages/mycenter/help/help",
+=======
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mycenter/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "已完成",
+					"pathName": "pages/mycenter/done/done",
+>>>>>>> Stashed changes
 					"scene": null
 				}
 			]
