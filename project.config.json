@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.0",
-	"appid": "wx3294bf950431ee1b",
+	"appid": "wx681b37af42d1b55f",
 	"projectname": "Punch",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -30,13 +30,24 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "help",
+					"pathName": "pages/mycenter/help/help",
+					"scene": null
+				}
+			]
 		}
 	}
 }

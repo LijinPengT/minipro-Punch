@@ -1,5 +1,11 @@
 <!--pages/mycenter/help/help.wxml-->
 <image class='bgimg' src='../../../images/slices/bgimg1.png'></image>
 <view class='head'>写下您对我们的意见吧！</view>
-<textarea></textarea>
-<van-button type='primary'>提交</van-button>
+<view class="section">
+<view class='textarea'>
+<form class='subForm'>
+    <textarea placeholder="Write down here..." auto-focus placeholder-style='color: #fff;' name="textarea" />
+</form>
+</view>
+  <button form-type="submit" class='submit'>提交</button>
+</view>

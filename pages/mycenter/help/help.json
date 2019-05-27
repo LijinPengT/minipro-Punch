@@ -1,5 +1,4 @@
 {
-  "usingComponents": {
-    "van-button": "../../../dist/button/index"
-  }
+  "navigationBarTitleText": "帮助与反馈",
+  "navigationBarTextStyle": "black"
 }
