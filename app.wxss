@@ -30,3 +30,10 @@ page{
   background: #f1f1f1;
   height: 300rpx;
 }
+
+.cu-padding {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 50rpx 200rpx;
+  margin:50rpx 30rpx 0rpx 30rpx;
+}

@@ -4,64 +4,42 @@ const app = getApp()
 
 Page({
   data: {
-    active: 0,
-    icon: {
-      normal: '../../images/slices/pending.png',
-      active: '../../images/slices/pending.png'
-    },
-  },
-  onChange(event) {
-    console.log(event.detail)
-  },
-  toIndex: function() {
-    wx.switchTab({
-      url: '../ index / index',
-    })
-  },
-  toPunch: function() {
-   wx.switchTab({
-     url: '../punch/punch',
-   })
-  },
-  toMyCenter: function() {
-    wx.switchTab({
-      url: '../mycenter/index/index',
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    pendList: [
+      {
+        id: 1,
+        content: '背单词30个'
+      },
+      {
+        id: 2,
+        content: '跑步2公里'
+      },
+      {
+        id: 3,
+        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+      },
+      {
+        id: 3,
+        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+      },
+      {
+        id: 3,
+        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+      },
+      {
+        id: 3,
+        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+      },
+      {
+        id: 3,
+        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+      },
+      {
+        id: 3,
+        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    ]
+
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })
+  
+

@@ -6,15 +6,17 @@
     "pages/mycenter/help/help",
     "pages/mycenter/done/done",
     "pages/mycenter/about/about",
-    "pages/mycenter/degree/degree"
+    "pages/mycenter/degree/degree",
+    "pages/creat/creat"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Punch",
+    "navigationBarTitleText": "iPunch",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "backgroundColor": "#99ffffff",
     "color": "#707070",
     "selectedColor": "#F35458",
     "list": [
@@ -39,8 +41,4 @@
     ]
   },
   "sitemapLocation": "sitemap.json"
-<<<<<<< Updated upstream
-=======
-  
->>>>>>> Stashed changes
 }

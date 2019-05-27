@@ -1,3 +1,4 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "Be a great 'puncher'",
+  "navigationBarTextStyle": "black"
 }
