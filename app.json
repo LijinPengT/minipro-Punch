@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/components/nav/nav",
     "pages/index/index",
     "pages/punch/punch",
     "pages/mycenter/index/index",
@@ -13,16 +14,17 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "iPunch",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
   },
   "tabBar": {
-    "backgroundColor": "#99ffffff",
+    "backgroundColor": "#ffffff",
     "color": "#707070",
     "selectedColor": "#F35458",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "代办",
+        "text": "待办",
         "iconPath": "images/slices/pending.png",
         "selectedIconPath": "images/slices/pending.png"
       },

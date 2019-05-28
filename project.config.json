@@ -21,6 +21,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -38,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -51,6 +53,13 @@
 					"id": -1,
 					"name": "已完成",
 					"pathName": "pages/mycenter/done/done",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "导航组件",
+					"pathName": "pages/components/nav/nav",
 					"scene": null
 				}
 			]

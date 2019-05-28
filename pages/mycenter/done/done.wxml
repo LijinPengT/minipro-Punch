@@ -1,7 +1,7 @@
 <!--pages/mycenter/done/done.wxml-->
 <!-- 组件  返回 -->
-<view class='contain'>
 
+<view class='contain'>
   <image src='../../../images/slices/bgimg1.png' mode='scaleToFill' ></image>
   <view class='program'>
     <view class='kind inline-block width50'>
@@ -13,8 +13,7 @@
         查看详情
       </view>
     </view>
-      
-      <view class='count width50 inline-block'>30次</view>
+      <view class='count width50 inline-block'>30天</view>
   </view>
   <view class='program'>
     <view class='kind inline-block width50'>
@@ -27,7 +26,32 @@
       </view>
     </view>
       
-      <view class='count width50 inline-block'>30次</view>
+      <view class='count width50 inline-block'>30天</view>
+  </view>
+  <view class='program'>
+    <view class='kind inline-block width50'>
+      <view class='run inline-block' >
+        <text>icon</text>
+        跑步
+      </view>
+      <view style='font-size:10px;' class='width50'>
+        查看详情
+      </view>
+    </view>
+      
+      <view class='count width50 inline-block'>30天</view>
+  </view><view class='program'>
+    <view class='kind inline-block width50'>
+      <view class='run inline-block' >
+        <text>icon</text>
+        背单词
+      </view>
+      <view style='font-size:10px;' class='width50'>
+        查看详情
+      </view>
+    </view>
+      
+      <view class='count width50 inline-block'>30天</view>
   </view>
 </view>
 

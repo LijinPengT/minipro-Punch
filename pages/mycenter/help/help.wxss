@@ -16,7 +16,7 @@
 .section {
   height: 600rpx;
   margin: 5px 20px 0;
-  padding: 40px;
+  padding: 40rpx 40rpx;
   position: relative;
   border: 1px solid rgba(102, 102, 102, 0.758);
   border-radius: 30rpx;
@@ -24,8 +24,14 @@
 }
 .textarea {
   height: 100%;
+  width: 100%;
+  display: inline-block;
   background: linear-gradient(transparent 98%, #E4E4E4 0, #E4E4E4 1%);
   background-size: 100% 50rpx;
+}
+textarea{
+  line-height: 46rpx;
+  width: 100%;
 }
 .submit {
   bottom: -5rem;
