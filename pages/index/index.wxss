@@ -18,12 +18,35 @@ page {
   margin:50rpx 30rpx 0rpx 30rpx;
   max-height: 135rpx;
   overflow: hidden;
+  text-align: center;
+}
+.punchedBar {
+  box-sizing: border-box;
+  padding: 35rpx 0rpx;
+  margin:50rpx 30rpx 0rpx 30rpx;
+  max-height: 135rpx;
+  
+  position: relative;
+  text-align: center;
+}
+.punchedBar::before {
+  content: '成功PUNCHED';
+  color: #70707025;
+  margin: 0;
+  padding: 10rpx 0;
+  margin: -50rpx -80rpx 0 -70rpx;
+  font-size: 95rpx;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  background: #70707025;
+}
+text{
+  max-height: 50rpx;
+  overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 1;
   text-align: center;
-  
-}
-text{
   display: inline-block;
   width: 80%;
   font-size: 38rpx;

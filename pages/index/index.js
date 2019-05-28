@@ -7,39 +7,48 @@ Page({
     pendList: [
       {
         id: 1,
-        content: '背单词30个'
+        content: '准备每天跑步',
       },
       {
         id: 2,
-        content: '跑步2公里'
+        content: '跑步2公里',
       },
       {
         id: 3,
-        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+        content: '跑步2公里',
+     
       },
       {
         id: 3,
-        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+        content: '跑步2公里',
       },
       {
         id: 3,
-        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+        content: '跑步2公里',
       },
       {
         id: 3,
-        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+        content: '跑步2公里',
       },
       {
         id: 3,
-        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+        content: '跑步2公里',
+        
       },
       {
         id: 3,
-        content: '您是想案件上次啊u守财奴擦拭嫩草能从i按 '
+        content: '跑步2公里',
       }
-    ]
-
+    ],
+    bgBar: 'bgBar',
+    punchedBar: 'punchedBar'
   },
+  select: function(e) {
+    console.log(e)
+    this.setData({
+      
+    })
+  }
 })
   
 

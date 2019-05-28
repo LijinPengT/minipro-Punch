@@ -4,7 +4,10 @@
 </navigator>
 
 <view wx:for="{{ pendList }}" wx:key="*this">
-<view class='bgBar'>
+<view class='{{bgBar=="bgBar"?"bgBar":"punchedBar"}}' bindtap="select">
+<text>{{item.content}}</text>
+</view>
+<view class='{{punchedBar}}' bindtap='select'>
 <text>{{item.content}}</text>
 </view>
 </view>

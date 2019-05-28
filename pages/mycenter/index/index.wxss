@@ -4,11 +4,15 @@
   overflow: hidden;
 }
 .user-bg{
-  width: 100%;
+  width: 750rpx;
   height: 400rpx;
+  object-fit: none;
+  box-shadow: -3px 3px 6px -3px black,
+               6px 0 6px -3px black;
 }
 .user-head{
   box-sizing: border-box;
+  box-shadow: 3px 3px 6px -3px black;
   border-radius: 50%;
   width: 200rpx;
   height: 200rpx;
@@ -22,7 +26,8 @@
 }
 /* -------背景图片 */
 .deg-position{
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
+  box-shadow: 3px 3px 6px -3px black; 
 }
 .cu-block1 {
   margin: 0 auto;

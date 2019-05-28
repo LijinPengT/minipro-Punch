@@ -27,11 +27,13 @@
   width: 100%;
   display: inline-block;
   background: linear-gradient(transparent 98%, #E4E4E4 0, #E4E4E4 1%);
-  background-size: 100% 50rpx;
+  background-size: 100% 52rpx;
 }
 textarea{
-  line-height: 46rpx;
+  height: 100%;
+  line-height: 52rpx;
   width: 100%;
+  color: #fff;
 }
 .submit {
   bottom: -5rem;

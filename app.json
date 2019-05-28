@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/components/nav/nav",
     "pages/index/index",
     "pages/punch/punch",
     "pages/mycenter/index/index",
@@ -14,8 +13,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "iPunch",
-    "navigationBarTextStyle": "black",
-    "navigationStyle":"custom"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "backgroundColor": "#ffffff",
@@ -37,8 +35,8 @@
       {
         "pagePath": "pages/mycenter/index/index",
         "text": "我的",
-        "iconPath": "images/slices/punch.png",
-        "selectedIconPath": "images/slices/punch.png"
+        "iconPath": "images/slices/mycenter.png",
+        "selectedIconPath": "images/slices/mycenter.png"
       }
     ]
   },

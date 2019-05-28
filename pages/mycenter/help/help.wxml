@@ -1,4 +1,5 @@
 <!--pages/mycenter/help/help.wxml-->
+<nav></nav>
 <image class='bgimg' src='../../../images/slices/bgimg1.png'></image>
 <view class='head'>写下您对我们的意见吧！</view>
 <view class="section">
