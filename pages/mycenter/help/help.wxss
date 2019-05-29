@@ -38,6 +38,7 @@ textarea{
 .submit {
   bottom: -5rem;
   width: 300rpx;
-  height: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
   border-radius: 50rpx;
 }

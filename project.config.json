@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -81,6 +81,13 @@
 					"id": -1,
 					"name": "关于我们",
 					"pathName": "pages/mycenter/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人等级",
+					"pathName": "pages/mycenter/degree/degree",
 					"scene": null
 				}
 			]

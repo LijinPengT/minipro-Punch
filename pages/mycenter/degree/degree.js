@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      degree:[
+        { weight: '最轻量级', en:'Bantamweight'},
+        { weight: '轻量级', en:'Lightweight'},
+        { weight: '次中量级', en:'Welterweight'},
+        { weight: '中量级', en:'Middleweight'},
+        { weight: '轻重量级', en:'Light Heavyweight'},
+        { weight: '次重量级', en:'Cruiserweight'},
+        { weight: '重量级', en:'Heavyweight'}
+      ]
   },
 
   /**

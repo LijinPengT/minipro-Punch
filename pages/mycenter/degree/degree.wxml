@@ -1,2 +1,5 @@
 <!--pages/mycenter/degree/degree.wxml-->
-<text>个人等级详情</text>
+<view class='cu-form-group' wx:for="{{degree}}">
+<view>{{item.weight}}</view>
+<view>{{item.en}}</view>
+</view>
