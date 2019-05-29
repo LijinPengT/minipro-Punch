@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <navigator url='/pages/creat/creat'>
-<button class='newPend'>+ 新建代办</button>
+<button class='newPend'>+ 新建待办</button>
 </navigator>
 
 <view wx:for="{{ pendList }}" wx:key="*this">
-<view class='{{bgBar=="bgBar"?"bgBar":"punchedBar"}}' bindtap="select">
+<view class='{{bgBar}}' data-num="{{num}}" bindtap="select">
 <text>{{item.content}}</text>
 </view>
 <view class='{{punchedBar}}' bindtap='select'>

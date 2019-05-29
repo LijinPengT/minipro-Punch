@@ -1,0 +1,13 @@
+/* pages/punch/punch-detail/punch-detail.wxss */
+.calendar {
+    background-color: #eceaea;
+    padding-top: 10px;
+}
+.header {
+    font-size: large; /*修改了标题文字和按钮的大小*/
+    color: #707070;   /*修改了标题文字和按钮的颜色*/
+}
+.board {
+    background-color: #70707025;
+    color: #707070;
+}

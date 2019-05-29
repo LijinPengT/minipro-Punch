@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/punch/punch",
     "pages/mycenter/index/index",
     "pages/mycenter/help/help",
     "pages/mycenter/done/done",
     "pages/mycenter/about/about",
     "pages/mycenter/degree/degree",
-    "pages/creat/creat"
+    "pages/creat/creat",
+    "pages/punch/punch-detail/punch-detail",
+    "pages/punch/punch/punch"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,21 +25,27 @@
         "pagePath": "pages/index/index",
         "text": "待办",
         "iconPath": "images/slices/pending.png",
-        "selectedIconPath": "images/slices/pending.png"
+        "selectedIconPath": "images/slices/pendingS.png"
       },
       {
-        "pagePath": "pages/punch/punch",
+        "pagePath": "pages/punch/punch/punch",
         "text": "打卡",
         "iconPath": "images/slices/punch.png",
-        "selectedIconPath": "images/slices/punch.png"
+        "selectedIconPath": "images/slices/punchS.png"
       },
       {
         "pagePath": "pages/mycenter/index/index",
         "text": "我的",
         "iconPath": "images/slices/mycenter.png",
-        "selectedIconPath": "images/slices/mycenter.png"
+        "selectedIconPath": "images/slices/mycenterS.png"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  }
 }
