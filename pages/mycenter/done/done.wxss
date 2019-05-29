@@ -9,7 +9,6 @@ image{
   left: -25%;
   top: 0;
 }
-
 .program{
   width: 80%;
   border-radius: 20rpx;

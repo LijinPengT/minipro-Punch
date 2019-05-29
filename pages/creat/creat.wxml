@@ -1,2 +1,22 @@
 <!--pages/creat/creat.wxml-->
-<text>pages/creat/creat.wxml</text>
+<view class='wrapper'>
+  <view class='head'>
+    <view >新建待办</view>
+  </view>
+  <!-- 头部 -->
+  <view>
+    <input placeholder='标题'></input>
+  </view>
+  <view class='icon'>
+    icon
+  </view>
+  <view>
+    <input placeholder='打卡次数' style='text-align:left'>
+    </input>
+    <input placeholder='打卡天数' style='text-align:left;'></input>
+  </view>
+  <view>
+    <button>确认</button>
+  </view>
+</view>
+

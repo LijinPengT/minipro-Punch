@@ -2,7 +2,7 @@
 page {
   background: rgba(238,238,238,1);
   opacity: 1;
-
+  padding-top: 40rpx;
 }
 
 .newPend {
@@ -50,4 +50,5 @@ text{
   display: inline-block;
   width: 80%;
   font-size: 38rpx;
+  font-weight: 1000;
 }

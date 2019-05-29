@@ -16,27 +16,18 @@ Page({
       {
         id: 3,
         content: '跑步2公里',
-     
       },
       {
-        id: 3,
+        id: 4,
         content: '跑步2公里',
       },
       {
-        id: 3,
-        content: '跑步2公里',
-      },
-      {
-        id: 3,
-        content: '跑步2公里',
-      },
-      {
-        id: 3,
+        id: 5,
         content: '跑步2公里',
         
       },
       {
-        id: 3,
+        id: 6,
         content: '跑步2公里',
       }
     ],

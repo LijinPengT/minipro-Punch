@@ -1,1 +1,43 @@
 /* pages/creat/creat.wxss */
+page{
+  position: relative;
+  padding-top: 30px;
+}
+.wrapper{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 90%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: inline-block;
+
+  position: relative;
+  text-align: center;
+  border: 1px solid #000;
+}
+.head{
+  margin: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+input{
+  border-bottom: 1px solid rgb(197, 192, 192);
+  margin-bottom: 20px;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon{
+  padding: 20px 10px;
+  text-align: center;
+}
+button{
+  width: 40%;
+  background-color: #F25458;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  left: 50%;transform: translateX(-50%);
+}

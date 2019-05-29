@@ -5,6 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    doneList:[
+      {
+        Day: '30天',
+        head: '跑步'},
+      {
+        Day: '30天',
+        head: '跑步'
+      },
+      {
+        Day: '30天',
+        head: '跑步'
+      }
+    ]
+    ,
     con_height:0,
     con_width:0
   },
