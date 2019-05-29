@@ -2,7 +2,6 @@
 <view class='wrapper'>
   <view class='head'>
     <image src='../../images/slices/bgimg1.png' mode='top'></image>
-    <view >新建待办</view>
   </view>
   <!-- 头部 -->
   <view>

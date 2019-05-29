@@ -3,4 +3,20 @@ page{
   text-align: center;
   background-color: #FFF9F9F9;
   font-size: 16px;
+  padding-top: 40rpx;
+}
+.inner{
+  padding: 0 30rpx;
+}
+.miniIcon{
+  height: 100rpx;
+  width: 100rpx;
+  transform: translate(0,-50rpx);
+}
+.flyIcon{
+  height: 200rpx;
+  width: 200rpx;
+}
+.headIcon{
+  padding: 80rpx;
 }
