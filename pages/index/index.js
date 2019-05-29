@@ -4,31 +4,26 @@ const app = getApp()
 
 Page({
   data: {
+    show:true,
     pendList: [
       {
-        id: 1,
-        content: '准备每天跑步',
+        content: '准备每'
       },
       {
-        id: 2,
-        content: '跑步2公里',
+        content: '跑步2公里'
       },
       {
-        id: 3,
-        content: '跑步2公里',
+        content: '跑步2公里'
       },
       {
-        id: 4,
-        content: '跑步2公里',
+        content: '跑步2公里'
       },
       {
-        id: 5,
-        content: '跑步2公里',
+        content: '跑步2公里'
         
       },
       {
-        id: 6,
-        content: '跑步2公里',
+        content: '跑步2公里'
       }
     ],
     bgBar: 'bgBar',
@@ -37,7 +32,13 @@ Page({
   select: function(e) {
     console.log(e)
     this.setData({
-      
+    })
+  },
+  toShow:function(){
+    var List = this.data.pendList;
+    List.unshift({content:'未定义'})
+    this.setData({
+      pendList:List
     })
   }
 })

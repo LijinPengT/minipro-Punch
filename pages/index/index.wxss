@@ -4,10 +4,10 @@ page {
   opacity: 1;
   padding-top: 40rpx;
 }
-
 .newPend {
   color: #fff;
-  margin: 12rpx 30rpx;
+  
+
   background: #F25458;
   border-radius: 10rpx;
 }
@@ -15,6 +15,7 @@ page {
   background: #fff;
   box-sizing: border-box;
   padding: 35rpx 0rpx;
+  border-radius: 10px;
   margin:50rpx 30rpx 0rpx 30rpx;
   max-height: 135rpx;
   overflow: hidden;
@@ -51,4 +52,52 @@ text{
   width: 80%;
   font-size: 38rpx;
   font-weight: 1000;
+}
+/* -----弹出框---- */
+.new{
+  border: 1px solid rgb(212, 209, 209);
+  border-radius: 8px;
+  width: 90%;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 99;
+}
+.head{
+  border-radius: 8px 8px 0px 0px;
+  background: #9fd0cf;
+  text-align:center;
+  padding:5px;
+  position: relative;
+}
+.head>text{
+  width: 20px;
+  position: absolute;
+  right: 10px;
+
+}
+.cu-form-group{
+  border-top: none;
+}
+input,textarea{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+input{
+  border-bottom: 1px solid #f1f1f1;
+}
+button{
+  background-color: #F25458;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;transform: translateX(-50%);
+  color: #fff;
+}
+button:active{
+  background-color:rgb(243, 85, 90);
+  
 }

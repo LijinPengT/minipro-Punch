@@ -1,9 +1,8 @@
 <!--pages/creat/creat.wxml-->
-<view class='wrapper'>
+<!-- <view class='wrapper'>
   <view class='head'>
     <image src='../../images/slices/bgimg1.png' mode='top'></image>
   </view>
-  <!-- 头部 -->
   <view>
     <input placeholder='标题'></input>
   </view>
@@ -18,5 +17,30 @@
   <view>
     <button>确认</button>
   </view>
-</view>
+</view> -->
+<!-- ----- -->
+<!-- 弹出框 -->
+  <view class='new' style='position:fixed;' hidden='{{show}}'>
+    <view class='wrapper'>
+      <view class='head'>
+        添加新的打卡
+        <image style='position:absolute;' src='../../images/slices/bgimg1.png' mode='aspectFill'></image>
+      </view>
+      <view class='cu-form-group'>
+        <input placeholder='标题'></input>
+      </view>
+      <view class='cu-form-group'>
+        <input placeholder='时长'></input>
+      </view>
+      <view class='cu-form-group'>
+        <textarea placeholder='建立一个新目标，准备好坚持他'>
+        </textarea>
+      </view>
+      <view class='cu-form-group'>
+        <input placeholder='签名'></input>
+      </view>
+      <view><button>确认</button></view>
+    </view>
+  </view>
+  <!-- 弹出框 -->
 
