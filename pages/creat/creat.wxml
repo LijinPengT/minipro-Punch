@@ -39,7 +39,7 @@
       <view class='cu-form-group'>
         <input placeholder='签名'></input>
       </view>
-      <view><button>确认</button></view>
+      <view style='position:relative;'><button>确认</button></view>
     </view>
   </view>
   <!-- 弹出框 -->
