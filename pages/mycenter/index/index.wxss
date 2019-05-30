@@ -5,7 +5,7 @@
 }
 .user-bg{
   width: 750rpx;
-  height: 500rpx;
+  height: 400rpx;
   object-fit: none;
   box-shadow: -1px 1px 2px -1px rgba(0, 0, 0, 0.938),
                1px 0 2px -1px rgba(0, 0, 0, 0.932);
@@ -20,7 +20,7 @@
   /* 居中 */
   position: absolute;
   left: 50%;transform: translate(-50%,-70%);
-  top: 50%;
+  top: 45%;
   /* 居中 */
   background: #fff;
 }
@@ -56,13 +56,13 @@
   margin-top: 30rpx;
 }
 .lvgt{
-  height: 60rpx;
-  width: 60rpx;
+  height: 50rpx;
+  width: 50rpx;
   margin-right: 30rpx;
 }
 .gt {
   height: 30rpx;
-  width: 30rpx;
+  width: 15rpx;
   margin-right: 30rpx;
 }
 /* -------*/

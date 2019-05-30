@@ -1,7 +1,7 @@
 <!--pages/punch/punch/punch.wxml-->
 <view class='wrapper'>
   <view>
-    <button bindtap='toShowNew'>+添加新的打卡</button>
+    <button bindtap='toShowNew'  class='add'>+添加新的打卡</button>
   </view>
   <view wx:for="{{list}}" bindtap='goDetails'>
     <view class='card'>
@@ -39,5 +39,8 @@
   <textarea placeholder='描述你的打卡内容'>
     
   </textarea>
-  <button class='submit' bindtap='toShowNew'>确认</button>
+  <view class='btnWrapper' bindtap='toShowNew'>
+  <button class='submit'>确认</button>
+  <button class='cancle'>取消</button>
+  </view>
 </view>

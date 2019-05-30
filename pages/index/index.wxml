@@ -2,13 +2,13 @@
 
 <view style='padding:0px 10px;'>
   
-  <navigator url='/pages/creat/creat'>
+  <!-- <navigator url='/pages/creat/creat'> -->
     <button  class='newPend' bindtap='toShow' >+ 新建待办</button>
-  </navigator>
   <view wx:for="{{ pendList }}" wx:key="*this">
     <view class='{{bgBar=="bgBar"?"bgBar":"punchedBar"}}' bindtap="select">
-      {{item.content}}
+      <input style='font-size:30rpx;' placeholder='请输入你的待办事件'></input>
     </view>
+    <view class='circle'></view>
     <!-- <view class='{{punchedBar}}' bindtap='select'>
       <text>{{item.content}}</text>
     </view> -->

@@ -17,13 +17,6 @@ Page({
       },
       {
         content: '跑步2公里'
-      },
-      {
-        content: '跑步2公里'
-        
-      },
-      {
-        content: '跑步2公里'
       }
     ],
     bgBar: 'bgBar',

@@ -5,14 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show:false,
+    show:true,
     list:[
       { pro: "背单词30个", finishsrc:"../../../ images / slices / punched.png",src:"../../../images/slices/word.png",today:'今日已成功打卡',num:'30'},
       { pro: "背单词30个", finishsrc: "../../../ images / slices / punched.png", src: "../../../images/slices/word.png", today: '今日已成功打卡', num: '30' },
       { pro: "背单词30个", finishsrc: "../../../ images / slices / punched.png", src: "../../../images/slices/word.png", today: '今日已成功打卡', num: '30' }
     ]
   },
-  toShowNew:function(){
+  toShowNew:function(event){
     var show = this.data.show;
     var that = this;
     this.setData({

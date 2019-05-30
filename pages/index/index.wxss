@@ -3,22 +3,19 @@ page {
   background: rgba(238,238,238,1);
   opacity: 1;
   padding-top: 40rpx;
-}
-.newPend {
-  color: #fff;
-  
 
-  background: #F25458;
-  border-radius: 10rpx;
 }
+
 .bgBar {
+  margin: 40rpx 0;
   background: #fff;
   box-sizing: border-box;
-  padding: 35rpx 0rpx;
+  padding: 35rpx 0rpx 0rpx 0rpx;
   border-radius: 10px;
-  margin:50rpx 30rpx 0rpx 30rpx;
-  max-height: 135rpx;
-  overflow: hidden;
+  width: 90%;
+  position: relative;
+  left: 50%;transform: translateX(-50%);
+  min-height: 135rpx;
   text-align: center;
   box-shadow: 3px 3px 3px -3px rgb(160, 158, 158);
 }
@@ -42,6 +39,9 @@ page {
   width: 100%;
   z-index: -1;
   background: #70707025;
+}
+.setting>button{
+  flex:1;
 }
 text{
   max-height: 50rpx;
@@ -91,14 +91,20 @@ input,textarea{
 input{
   border-bottom: 1px solid #f1f1f1;
 }
-button{
+.submit{
+  background-color: #f25458;
+  color: #fff;
+}
+.newPend{
   background-color: #F25458;
   border-radius: 10px;
   position: relative;
   left: 50%;transform: translateX(-50%);
   color: #fff;
+  width: 90%;
+  margin: 0;
 }
-button:active{
+.newPend:active{
   background-color:rgb(243, 85, 90);
   
 }

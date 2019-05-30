@@ -2,12 +2,14 @@
 button {
   margin-top: 40rpx;
   background-color: #F25458;
-  box-shadow: 3px 3px 3px -3px rgb(223, 120, 120);
-  border-radius: 8px;
+  border-radius: 0;
   position: relative;
   color: #fff;
+  flex: 1;
 }
-
+.add{
+  border-radius: 8px;
+}
 /* pages/punch/punch/punch.wxss */
 .wrapper{
   padding: 20rpx  40rpx;
@@ -34,7 +36,6 @@ button {
   background-color: #fff;
   top: 10%;
   left: 50%;transform: translateX(-50%);
-  border: 1px solid #000;
   border-radius: 8px;
   width: 90%;
   height: auto;
@@ -65,8 +66,18 @@ textarea{
   left: 50%;
   transform: translateX(-50%);
 }
-.submit{
-  width: 40%;
-  margin-bottom: 20px;
+.btnWrapper{
+  display: flex;
 }
+.submit{
+  border-bottom-left-radius: 8px;
+  font-weight: bolder;
+}
+.cancle{
+  font-weight: bolder;
+  color: #707070;
+  background-color: #eceaea;
+  border-bottom-right-radius: 8px;
+}
+
 /* 进度条 */
