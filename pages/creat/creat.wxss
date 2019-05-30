@@ -64,8 +64,7 @@ button{
   background-color: #F25458;
   width: 40%;
   border-radius: 8px;
-  position: relative;
-  left: 50%;transform: translateX(-50%);
+  margin-bottom: 20px;
   color: #fff;
 }
 button:active{
