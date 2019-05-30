@@ -23,6 +23,8 @@ input{
   transform: translateX(-50%);
 }
 
+
+
 .new{
   border: 1px solid rgb(212, 209, 209);
   border-radius: 8px;
@@ -39,12 +41,12 @@ input{
   border-radius: 8px 8px 0px 0px;
   text-align:center;
   position: relative;
+
 }
 .head>text{
   width: 20px;
   position: absolute;
   right: 10px;
-
 }
 .cu-form-group{
   border-top: none;
@@ -54,7 +56,6 @@ input,textarea{
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
-
 }
 input{
   border-bottom: 1px solid #f1f1f1;

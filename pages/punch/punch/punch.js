@@ -5,9 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
+    show:false,
     list:[
-      { pro: "背单词30个", finishsrc:"../../../ images / slices / punched.png",src:"../../../images/slices/word.png",today:'今日已成功打卡',num:'30'}
+      { pro: "背单词30个", finishsrc:"../../../ images / slices / punched.png",src:"../../../images/slices/word.png",today:'今日已成功打卡',num:'30'},
+      { pro: "背单词30个", finishsrc: "../../../ images / slices / punched.png", src: "../../../images/slices/word.png", today: '今日已成功打卡', num: '30' },
+      { pro: "背单词30个", finishsrc: "../../../ images / slices / punched.png", src: "../../../images/slices/word.png", today: '今日已成功打卡', num: '30' }
     ]
+  },
+  toShowNew:function(){
+    var show = this.data.show;
+    var that = this;
+    this.setData({
+      show:!show
+    })
   },
 
   /**
@@ -16,12 +26,16 @@ Page({
   onLoad: function (options) {
 
   },
-
+  goDetails:function(){
+    wx.navigateTo({
+      url: '/pages/punch/punch-detail/punch-detail',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

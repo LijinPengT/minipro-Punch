@@ -20,6 +20,7 @@ page {
   max-height: 135rpx;
   overflow: hidden;
   text-align: center;
+  box-shadow: 3px 3px 3px -3px rgb(160, 158, 158);
 }
 .punchedBar {
   box-sizing: border-box;
