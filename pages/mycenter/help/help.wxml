@@ -1,6 +1,6 @@
 <!--pages/mycenter/help/help.wxml-->
-<nav></nav>
-<image class='bgimg' mode='scaleFill' src='../../../images/slices/longbg.png'></image>
+<view>
+  <image class='bgimg' mode='scaleFill' src='../../../images/slices/longbg.png'></image>
 <view class='head'>写下您对我们的意见吧！</view>
 <view class="section">
 <view class='textarea'>
@@ -9,4 +9,5 @@
 </form>
 </view>
   <button form-type="submit" class='submit'>提交</button>
+</view>
 </view>

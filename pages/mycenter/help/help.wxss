@@ -9,12 +9,15 @@
 }
 .head {
   padding:30px 20px 0;
+  margin-left: 20rpx;
   color: #fff;
+  font-weight: bold;
+  text-shadow: 0px 3px 6px  rgb(121, 119, 119);
   font-size: 42rpx;
 }
 .section {
-  height: 600rpx;
-  margin: 5px 20px 0;
+  height: 700rpx;
+  margin: 20px 20px 0;
   padding: 40rpx 40rpx;
   position: relative;
   border: 1px solid rgba(102, 102, 102, 0.758);
@@ -26,16 +29,18 @@
   width: 100%;
   display: inline-block;
   background: linear-gradient(transparent 98%, #E4E4E4 0, #E4E4E4 1%);
-  background-size: 100% 52rpx;
+  background-size: 100% 60rpx;
 }
 textarea{
   height: 100%;
-  line-height: 52rpx;
   width: 100%;
+  font-size: 30rpx;
+  line-height: 60rpx;
   color: #fff;
+
 }
 .submit {
-  bottom: -5rem;
+  bottom: -100rpx;
   width: 300rpx;
   height: 80rpx;
   line-height: 80rpx;

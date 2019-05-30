@@ -9,6 +9,7 @@ button {
 }
 .add{
   border-radius: 8px;
+  width: 90%;
 }
 /* pages/punch/punch/punch.wxss */
 .wrapper{
