@@ -1,7 +1,4 @@
 <!--pages/punch/punch/punch.wxml-->
-
-
-
 <view class='wrapper'>
   <view>
     <button>+添加新的打卡</button>
