@@ -14,7 +14,7 @@ page{
 } 
 /* 表单样式 */
 .margin-top{
-  margin-top: 50rpx;
+  margin-top: 10rpx;
 }
 .cu-form-group {
 	background-color: #fff;

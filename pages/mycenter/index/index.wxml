@@ -6,7 +6,7 @@
   <view class='user-head'><open-data class='userHead' type="userAvatarUrl"></open-data></view>
   <navigator url='/pages/mycenter/degree/degree'>
   <view class=' cu-block1 width88 deg-position'>
-   <view><image class='gt' src='../../../images/slices/pending.png'></image></view>
+   <view><image class='lvgt' src='../../../images/slices/lv.png'></image></view>
     <view class='degree'>我的等级</view>
     <view class="deg-select">{{degree}}</view>
     <view><image class='gt' src='../../../images/slices/enter.png'></image></view>
@@ -14,7 +14,7 @@
   </navigator>
 </view>
 
-<view class="cu-form-group margin-top">
+<view class="cu-form-group margin-top" style='margin-top: -5rpx;'>
 		<view class="title">开启提醒</view>
 		<switch></switch>
 </view>
@@ -35,7 +35,7 @@
 
 <navigator url='/pages/mycenter/help/help'>
 <view class ='cu-form-group margin-bottom'>
-  <view>帮助</view>
+  <view>问题反馈</view>
   <view><image class='gt' src='../../../images/slices/enter.png'></image></view>
 </view>
 </navigator>
