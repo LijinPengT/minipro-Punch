@@ -9,6 +9,19 @@ App({
         console.log(err);
       }
     })
+
+    wx.cloud.init({
+      traceUser: true,
+      env: 'ipunch-test-ya5fo'
+    });
+    // wx.cloud.callFunction();
+    wx.cloud.callFunction({
+      name: 'punchs',
+      complete: res => {
+        wx.setStorageSync("openId", res.result.openid);
+        console.log('callFunction test result: ', res)
+      }
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

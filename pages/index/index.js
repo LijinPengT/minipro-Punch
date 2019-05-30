@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+const app = getApp();
+const db = wx.cloud.database()
 Page({
   data: {
     i:0,
@@ -27,23 +27,32 @@ Page({
     bgBar: 'bgBar',
     punchedBar: 'punchedBar'
   },
-  onLoad: function (options) {
-    var List = this.data.pendList;
-    var i = List.length;
-    console.log(i);
-    this.setData({
-      i:i
+  onLoad: function(){
+
+    let openId = wx.getStorageSync("openId");
+    // console.info(openId);
+    db.collection('todos').where({
+      open_id: openId
+    }).get({
+      success:res=>{
+        console.log(res.data);
+        for(let i = 0; i < res.data.length;i++){
+          res.data[i].content = res.data[i].things[0].content
+          console.log(res.data[i].things[0].content)
+        }
+
+        this.setData({
+          pendList:res.data
+        })
+      }
     })
   },
   getContent:function(e){
     console.log(e.detail.value)
   },
   toShow:function(){
+    //点击事件
     var List = this.data.pendList;
-    for(let j =0;j<List.length;j++){
-      List[j].i = List[j].i+1
-      console.log(List[j])
-    }
     List.unshift({content:'未定义',i:0})
     console.log(List)
     this.setData({
@@ -52,37 +61,27 @@ Page({
   },
   commitValue:function(e){
     var i = e.target.dataset.id;
+    console.log(i)
     var List = this.data.pendList;
-    for(let i = 0; i<List.length;i++){
-      let j = List[i].i
-      List[i].i = j++
-    }
     console.log(List)
-    console.log(e.detail.value)
-    List[i].content=e.detail.value;
     // List[i].content = e.detail.value;
     this.setData({
         pendList:List
     })
-    wx.cloud.init()
+
     wx.cloud.callFunction({
-      name:"addTodos",
-      data:{
-        things:e.detail.value
+      // 云函数名称
+      name: 'addTodos',
+      // 传给云函数的参数
+      data: {
+        things: this.data.pendList
       },
-      success:function(res){
-        console.log(res.result)
-      }
     })
-    wx.cloud.callFunction({
-      name: "todos",
-      // data: {
-      //   things: e.detail.value
-      // },
-      success: function (res) {
-        console.log(res.result)
-      }
-    })
+      .then(res => {
+        console.log(this.data.pendList) // 3
+      })
+      .catch(console.error)
+    
   }
 })
   

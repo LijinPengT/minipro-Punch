@@ -17,6 +17,7 @@
 	"appid": "wx681b37af42d1b55f",
 	"projectname": "Punch",
 	"cloudfunctionTemplateRoot": "",
+	"cloudfunctionRoot": "./functions/",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
