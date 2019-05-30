@@ -5,19 +5,24 @@ Page({
    * 页面的初始数据
    */
     data: {
+      startDate: '2019年5月29日',
+      endDate: '2019年7月8日',
+      punchDays: 10,
+      leaveDays: 4,
       dayStyle: [
         { month: 'current', day: new Date().getDate(), color: 'white', background: '#f25458' },
-        { month: 'prev', day: new Date().getDate(), color: 'white', background: '#ffffff', border:'#f25458' }
+        { month: 'current', day: new Date().getDate(), color: 'white', background: '#f25458' }
       ],
     },
     // 给点击的日期设置一个背景颜色
     dayClick: function (event) {
       let clickDay = event.detail.day;
+      console.log(event.detail.day)
       let changeDay = `dayStyle[1].day`;
       let changeBg = `dayStyle[1].background`;
       this.setData({
         [changeDay]: clickDay,
-        [changeBg]: "#f25458"
+        [changeBg]: "#f2545895"
       })
     },
 

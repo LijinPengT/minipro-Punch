@@ -23,7 +23,7 @@
   <view class='new' style='position:fixed;' hidden='{{show}}'>
     <view class='wrapper'>
       <view class='head'>
-        添加新的打卡
+        添加新的待办
         <image style='position:absolute;' src='../../images/slices/bgimg1.png' mode='aspectFill'></image>
       </view>
       <view class='cu-form-group'>

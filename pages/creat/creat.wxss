@@ -34,11 +34,10 @@ input{
   z-index: 99;
 }
 .head{
-  padding: 50px 0px;
+  padding: 20px 0px;
   color: #fff;
   border-radius: 8px 8px 0px 0px;
   text-align:center;
-  padding:5px;
   position: relative;
 }
 .head>text{

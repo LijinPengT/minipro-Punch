@@ -10,7 +10,6 @@
 .head {
   padding:30px 20px 0;
   color: #fff;
-  font-family: 'Microsoft YaHei';
   font-size: 42rpx;
 }
 .section {

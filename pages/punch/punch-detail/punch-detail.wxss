@@ -11,3 +11,31 @@
     background-color: #70707025;
     color: #707070;
 }
+.form {
+  background: #ffffff;
+  margin-top: 50rpx;
+  padding: 5rpx 0rpx 20rpx 0rpx;
+}
+.form-item {
+  display: flex;
+  margin-top: 20rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+  justify-content: space-between;
+}
+.hr {
+  align-items: center;
+  margin-top: 20rpx;
+  margin: 20rpx 40rpx 0 60rpx;
+  width: 85%;
+  height: 1px;
+  border-top: 1px #70707045 solid;  
+}
+button {
+  margin-top: 40rpx;
+  background-color: #F25458;
+  width: 40%;
+  border-radius: 8px;
+  position: relative;
+  color: #fff;
+}

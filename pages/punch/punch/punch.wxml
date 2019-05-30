@@ -1,1 +1,8 @@
 <!--pages/punch/punch/punch.wxml-->
+<view class='all'>
+  <navigator url='/pages/punch/punch-detail/punch-detail'>
+    <view class='punchList'>
+      <view class='listBar'><button>查看详情</button></view>
+    </view>
+  </navigator>
+</view>

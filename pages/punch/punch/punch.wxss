@@ -1,0 +1,9 @@
+button {
+  margin-top: 40rpx;
+  background-color: #F25458;
+  width: 40%;
+  border-radius: 8px;
+  position: relative;
+  color: #fff;
+
+}
