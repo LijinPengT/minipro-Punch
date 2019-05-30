@@ -3,7 +3,7 @@
 <!-- 背景图片 -->
 <view class='user'>
   <image class='user-bg' mode ="aspectFill"src='../../../images/slices/bgimg1.png'></image>
-  <image class='user-head' src='{{}}'></image>
+  <view class='user-head'><open-data class='userHead' type="userAvatarUrl"></open-data></view>
   <navigator url='/pages/mycenter/degree/degree'>
   <view class=' cu-block1 width88 deg-position'>
    <view><image class='gt' src='../../../images/slices/pending.png'></image></view>

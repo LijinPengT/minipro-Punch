@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -102,6 +102,13 @@
 					"id": -1,
 					"name": "打卡",
 					"pathName": "pages/punch/punch/punch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "punch-detail",
+					"pathName": "pages/punch/punch-detail/punch-detail",
 					"scene": null
 				}
 			]

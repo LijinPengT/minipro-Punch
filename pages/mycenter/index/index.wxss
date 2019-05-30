@@ -24,6 +24,15 @@
   /* 居中 */
   background: #fff;
 }
+.userHead {
+  width: 201rpx;
+  height:201rpx;
+  border-radius:50%;
+  display: flex;
+  overflow:hidden;
+  text-align: center;
+}
+
 /* -------背景图片 */
 .deg-position{
   transform: translateY(-50%);
