@@ -2,7 +2,7 @@
 <view class='all'>
   <calendar calendar-style="calendar" header-style="header" board-style="board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"/>
 
-  <view class='form'>
+  <view class='form punch'>
     <view class='form-item'><view class='in-item'>打卡天数</view><text>{{punchDays}}</text></view>
     <view class='hr'></view>
     <view class='form-item'><view>开始日期</view><text>{{startDate}}</text></view>
@@ -10,6 +10,11 @@
     <view class='form-item'><view>结束日期</view><text>{{endDate}}</text></view>
     <view class='hr'></view>
     <view class='form-item'><view>剩余次数</view><text>{{leaveDays}}</text></view>
+  </view>
+  <view class='form finish'>
+    <view class='form-item'><view class='in-item'>打卡次数</view><text>{{punchTimes}}</text></view>
+    <view class='hr'></view>
+    <view class='form-item'><view>距离目标</view><text>{{leaveTimes}}</text></view>
   </view>
 
   <view class='btn'><button>提交</button></view>

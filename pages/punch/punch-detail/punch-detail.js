@@ -9,6 +9,8 @@ Page({
       endDate: '2019年7月8日',
       punchDays: 10,
       leaveDays: 4,
+      punchTimes: 14,
+      leaveTimes: 0,
       dayStyle: [
         { month: 'current', day: new Date().getDate(), color: 'white', background: '#f25458' },
         { month: 'current', day: new Date().getDate(), color: 'white', background: '#f25458' }
@@ -22,7 +24,7 @@ Page({
       let changeBg = `dayStyle[1].background`;
       this.setData({
         [changeDay]: clickDay,
-        [changeBg]: "#f2545895"
+        [changeBg]: "#f25458"
       })
     },
 
