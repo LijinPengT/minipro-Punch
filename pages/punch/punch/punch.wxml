@@ -36,9 +36,6 @@
   <view class='cu-form-group'>
     <input placeholder='打卡时长'></input>
   </view>
-  <textarea placeholder='描述你的打卡内容'>
-    
-  </textarea>
   <view class='btnWrapper' bindtap='toShowNew'>
   <button class='submit'>确认</button>
   <button class='cancle'>取消</button>
