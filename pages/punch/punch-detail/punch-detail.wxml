@@ -1,4 +1,5 @@
 <!--pages/punch/punch-detail/punch-detail.wxml-->
+
 <view class='all'>
   <calendar calendar-style="calendar" header-style="header" board-style="board" days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick"/>
 

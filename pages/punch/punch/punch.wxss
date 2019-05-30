@@ -1,3 +1,4 @@
+
 button {
   margin-top: 40rpx;
   background-color: #F25458;
@@ -5,5 +6,24 @@ button {
   border-radius: 8px;
   position: relative;
   color: #fff;
+}
+
+/* pages/punch/punch/punch.wxss */
+.wrapper{
+  padding: 20rpx  40rpx;
+}
+.card{
+  margin: 30rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  position: relative;
+  min-height: 100rpx;
+  font-weight: bolder;
+  display: flex;
+  font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.punched{
+  position: absolute;
+  right: 20px;
 
 }

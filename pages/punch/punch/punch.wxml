@@ -1,8 +1,23 @@
 <!--pages/punch/punch/punch.wxml-->
-<view class='all'>
-  <navigator url='/pages/punch/punch-detail/punch-detail'>
-    <view class='punchList'>
-      <view class='listBar'><button>查看详情</button></view>
+
+
+
+<view class='wrapper'>
+  <view>
+    <button>+添加新的打卡</button>
+  </view>
+  <view wx:for="{{list}}">
+    <view class='card'>
+      <image src="{{item.src}}" style='height:100rpx;width:100rpx;' mode="aspectFit"></image>
+      <view>
+        <text>{{item.pro}}</text>
+        <view>
+          <text style='font-size:20rpx;margin-right:30rpx;'>已打卡{{item.num}}次</text>
+          <text style='font-size:20rpx;'>{{item.today}}</text>
+        </view>
+      </view>
+      <image class='punched' style='height:100rpx;width:100rpx;'src="../../../images/slices/punched.png"></image>
     </view>
-  </navigator>
+  </view>
 </view>
+
