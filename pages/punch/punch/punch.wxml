@@ -35,7 +35,8 @@
   </view>
   <form bindsubmit='formSubmit'>
     <view class='cu-form-group'>
-    <image bindtap='checked' class='{{item.clas}}' data-id='{{item.id}}' style='height:40rpx;width:40rpx;' wx:for="{{icon}}" src='{{item.src}}'></image>
+
+    <image bindtap='checked' class='icons {{item.clas}}' data-id='{{item.id}}' style='height:40rpx;width:40rpx;' wx:for="{{icon}}" src='{{item.src}}'></image>
   </view>
   <view class='cu-form-group'>
     <input name="punchTimes" placeholder='打卡次数（次）' bindblur='adddays'></input>

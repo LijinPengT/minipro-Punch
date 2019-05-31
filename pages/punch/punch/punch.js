@@ -15,13 +15,13 @@ Page({
     days:'30',
     selectIcon:[],
 
-    icon:[{clas:'check',id:0,name:"word",             src:"../../../images/slices/word.png"},
-          {clas:'check',id:1,name:"vagetable",              src:"../../../images/slices/vagetable.png"},
-          {clas:'check',id:2,name:"shoe",             src:"../../../images/slices/shoe.png"},
-          {clas:'check',id:3,name:"water",              src:"../../../images/slices/water.png"},
-          { clas: 'check', id: 4, name: "water", src: "../../../images/slices/flower.png" } ,
-          { clas: 'check', id: 5, name: "water", src: "../../../images/slices/book.png" },
-          { clas: 'check', id: 6, name: "water", src: "../../../images/slices/add.png" }
+    icon:[{clas:'check',id:0,name:"看书",             src:"../../../images/slices/word.png"},
+          {clas:'check',id:1,name:"减肥",              src:"../../../images/slices/vagetable.png"},
+          {clas:'check',id:2,name:"跑步",             src:"../../../images/slices/shoe.png"},
+          {clas:'check',id:3,name:"喝水",              src:"../../../images/slices/water.png"},
+          { clas: 'check', id: 4, name: "浇花", src: "../../../images/slices/flower.png" } ,
+          { clas: 'check', id: 5, name: "日记", src: "../../../images/slices/book.png" },
+          { clas: 'check', id: 6, name: "自定义", src: "../../../images/slices/add.png" }
     ],
     gary:'gary',
     show:true,
