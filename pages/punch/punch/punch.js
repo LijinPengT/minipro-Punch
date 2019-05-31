@@ -1,4 +1,9 @@
 // pages/punch/punch/punch.js
+wx.cloud.init({
+  env: 'ipunch-test-ya5fo'
+})
+const db = wx.cloud.database()
+
 Page({
 
   /**
@@ -21,7 +26,7 @@ Page({
     gary:'gary',
     show:true,
     //界面滤镜
-    progress:'30%',
+    progress:'0',
     //进度条
     list:[
       { 
@@ -134,6 +139,32 @@ Page({
       url: '/pages/punch/punch-detail/punch-detail',
     })
   },
+
+  // 添加新的打卡数据到后台
+  formSubmit: function(e) {
+    let title = e.detail.value.title;
+    let aimTims = e.detail.value.punchTims;
+    let punchDays = e.detail.value.punchDays;
+    let process = 0;
+    let done = false;
+    let startDate = new Date();
+    let endDate = startDate.getDay() + aimTims;
+    wx.cloud.callFunction({
+      name: 'addPunchs',
+      data: {
+        title: title,
+        aimTiems: aimTims,
+        punchDays: punchDays,
+        process: process,
+        done: done,
+        startDate: startDate,
+        leftTimes: aimTims
+      }
+    }).then(res=>{
+      console.log('success')
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

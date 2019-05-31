@@ -4,10 +4,10 @@
 <view class='head'>写下您对我们的意见吧！</view>
 <view class="section">
 <view class='textarea'>
-<form class='subForm'>
+<form class='subForm' bindsubmit='formSubmit'>
     <textarea placeholder="Write down here..." auto-focus placeholder-style='color: #fff;' name="textarea" />
+    <button form-type="submit" class='submit'>提交</button>
 </form>
 </view>
-  <button form-type="submit" class='submit'>提交</button>
 </view>
 </view>
