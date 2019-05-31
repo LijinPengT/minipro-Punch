@@ -22,6 +22,7 @@
       </input>
     </view>
     <view class='cu-form-group' style='display:flex;'>
-    <button class='form-btn' bindtap='submit'>确认</button>
-    <button class='form-btn' >取消</button></view>
+      <button class='form-btn' bindtap='submit'>确认</button>
+      <button class='form-btn' bindtap='cancle' >取消</button>
+    </view>
   </view>

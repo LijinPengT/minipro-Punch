@@ -38,9 +38,11 @@ Page({
   },
   //按钮取消
   cancle:function(){
-    data: {
-      hidden: true
-    }
+    this.setData({
+      hidden:true,
+      newtip:''
+    })
+    console.log(this.data.newtip)
   },
   //失去焦点
   getContent:function(e){
