@@ -7,12 +7,12 @@ page {
   margin: 28rpx 0;
   background: #fff;
   box-sizing: border-box;
-  padding: 35rpx 0rpx 0rpx 0rpx;
+  padding: 35rpx 0rpx 35rpx 0rpx;
+  font-size: 24px;
   border-radius: 10px;
   width: 90%;
   position: relative;
   left: 50%;transform: translateX(-50%);
-  min-height: 135rpx;
   text-align: center;
   box-shadow: 3px 3px 3px -3px rgb(160, 158, 158);
 }
@@ -114,4 +114,26 @@ input{
 .newPend:active{
   background-color:rgb(243, 85, 90);
   
+}
+/* 表单 */
+.new-form{
+  position: fixed;
+  width: 90%;
+  min-height: 300rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.head{
+  color: #fff;
+  font-weight: bold;
+}
+.form-btn{
+  width: 50%;
+  height: 100%;
+  background-color: #f25458;
+  margin: 0 0 40rpx 0;
+}
+.form-btn:nth-child(2){
+  background: #f1f1f1;
 }
