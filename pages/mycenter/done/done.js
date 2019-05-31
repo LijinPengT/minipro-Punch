@@ -1,4 +1,6 @@
 // pages/mycenter/done/done.js
+const app = getApp();
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -27,6 +29,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //初始化界面
     var that = this;
     wx.getSystemInfo({
       success:function(res){
@@ -39,8 +42,14 @@ Page({
         })
       }
     })
+  //获取完成事件
+    // db.collection('punchs').doc
   },
-
+  viewBindTap:function(){
+    wx.navigateTo({
+      url:'../../punch/punch-detail/punch-detail'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
