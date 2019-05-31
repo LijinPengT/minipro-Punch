@@ -6,11 +6,11 @@
   <view wx:for="{{list}}" >
     <view class='card'>
       <image src="{{item.src}}" style='height:80rpx;width:80rpx;' mode="aspectFit"></image>
-      <view  bindtap='goDetails'>
-        <text>{{item.pro}}</text>
-        <view>
+      <view  class='transright' bindtap='goDetails'>
+        <text >{{item.pro}}</text>
+        <view class='transtop' >
           <text style='font-size:20rpx;margin-right:30rpx;'>目标{{item.num}}次</text>
-          <text style='font-size:20rpx;'>{{item.today}}</text>
+          <text  style='font-size:20rpx;'>{{item.today}}</text>
         </view>
       </view>
       <image bindtap='changeIcon' class='punched' data-id="{{item.id}}"style='height:80rpx;width:80rpx;'src="{{item.punchImg}}"></image>
@@ -27,7 +27,7 @@
 <view  class='new'   hidden='{{show}}'>
   <view class='head'>
     添加新的打卡
-    <image mode='aspectFill' src='../../../images/slices/bgimg1.png'></image>
+    <image class="top_border" mode='aspectFill' src='../../../images/slices/bgimg1.png'></image>
   </view>
   <!-- head end -->
   <view class='cu-form-group'>
@@ -35,8 +35,11 @@
   </view>
   <form bindsubmit='formSubmit'>
     <view class='cu-form-group'>
-
-    <image bindtap='checked' class='icons {{item.clas}}' data-id='{{item.id}}' style='height:40rpx;width:40rpx;' wx:for="{{icon}}" src='{{item.src}}'></image>
+    <view wx:for="{{icon}}" style='display:inline;padding:30rpx 0;'>
+      <image bindtap='checked' class='icons {{item.clas}}' data-id='{{item.id}}' style='height:40rpx;width:40rpx;' src='{{item.src}}'></image>
+      <text class='info'>{{item.name}}</text>
+    </view>
+    
   </view>
   <view class='cu-form-group'>
     <input name="punchTimes" placeholder='打卡次数（次）' bindblur='adddays'></input>
@@ -44,7 +47,7 @@
   <view class='cu-form-group'>
     <input name="punchDays" placeholder='打卡时长（天）'></input>
   </view>
-  
+  <view class='breath'></view>
   <view class='btnWrapper' bindtap='toShowNew'>
   <button class='submit' form-type='submit' bindtap='addNew'>确认</button>
   <button class='cancle'>取消</button>

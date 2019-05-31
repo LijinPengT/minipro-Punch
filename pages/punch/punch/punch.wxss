@@ -36,6 +36,7 @@ button {
 }
 /* 弹出框 */
 .new{
+  font-size: 35rpx;
   position: fixed;
   background-color: #fff;
   top: 50%;
@@ -44,9 +45,11 @@ button {
   width: 90%;
   height: auto;
 }
-.head{
-  border-top-right-radius: 8px;
+.top_border{
   border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.head{
   text-align: center;
   padding: 10px;
   position: relative;
@@ -65,13 +68,8 @@ button {
   left: 50%;
   transform: translateX(-50%);
 }
-textarea{
-  border-top: 1px solid #f1f1f1;
-  padding-top: 20px;
-  width: 80%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+.breath{
+  background-color: #fff;
 }
 .btnWrapper{
   display: flex;
@@ -92,6 +90,7 @@ textarea{
 image{
   transition: 0.4s;
 }
+
 /* 进度条 */
 .progress{
   width: 90%;
@@ -109,10 +108,14 @@ image{
   border-radius: 4px;
   background: #F25458;
 }
-.icons:nth-child(1)::after{
-  content: '看书';
-  font-size: 10rpx;
-  display: inline;
+.info{
+  font-size:20rpx; display:block;text-align:center;
+}
+.transright{
+  transform: translateX(30rpx);
+}
+.transtop{
+  transform: translateY(-10rpx);
 }
   
 
