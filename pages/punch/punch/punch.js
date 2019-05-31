@@ -26,7 +26,7 @@ Page({
     gary:'gary',
     show:true,
     //界面滤镜
-    progress:'0',
+    process:'0',
     //进度条
     list:[
       { 
