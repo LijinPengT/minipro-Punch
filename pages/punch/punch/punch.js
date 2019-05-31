@@ -5,14 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    title:'',
+    //增加的标题
+    days:'30',
     selectIcon:[],
-    icon:[{clas:'check',id:0,title:"word",             src:"../../../images/slices/word.png"},
-          {clas:'check',id:1,title:"vagetable",              src:"../../../images/slices/vagetable.png"},
-          {clas:'check',id:2,title:"shoe",             src:"../../../images/slices/shoe.png"},
-          {clas:'check',id:3,title:"water",              src:"../../../images/slices/water.png"}
+
+    icon:[{clas:'check',id:0,name:"word",             src:"../../../images/slices/word.png"},
+          {clas:'check',id:1,name:"vagetable",              src:"../../../images/slices/vagetable.png"},
+          {clas:'check',id:2,name:"shoe",             src:"../../../images/slices/shoe.png"},
+          {clas:'check',id:3,name:"water",              src:"../../../images/slices/water.png"},
+          { clas: 'check', id: 4, name: "water", src: "../../../images/slices/flower.png" } ,
+          { clas: 'check', id: 5, name: "water", src: "../../../images/slices/book.png" },
+          { clas: 'check', id: 6, name: "water", src: "../../../images/slices/add.png" }
     ],
     gary:'gary',
     show:true,
+    //界面滤镜
+    progress:'30%',
+    //进度条
     list:[
       { 
         id:0,
@@ -42,6 +52,7 @@ Page({
          num: '30' }
     ]
   },
+  //选择icon 动态
   checked:function(e){
     var i = e.target.dataset.id;
     var list = this.data.icon;
@@ -52,16 +63,16 @@ Page({
       selectIcon:selectIcon,
       icon:list
     })
-
   },
+  //弹出框
   toShowNew:function(){
-
     var show = this.data.show;
     var that = this;
     this.setData({
       show:!show
     })
   },
+  //添加 新的打卡   确认
   addNew:function(){
     var list =this.data.list;
     let i = list.length;
@@ -69,17 +80,35 @@ Page({
     list.push({
       id: i++,
       punchImg: "../../../images/slices/punched.png",
-      pro: "背单词30个",
+      pro: this.data.title,
       finishsrc: "../../../images/slices/finish.png",
       src: icon,
       today: '今日已成功打卡',
-      num: '30'
+      num: this.data.days
     })
     this.setData({
       list:list,
       selectIcon:[]
     })
   },
+  // 添加标题
+  addtitle:function(e){
+    var title = this.data.title;
+    console.log(e.detail.value);
+    this.setData({
+      title:e.detail.value
+    })
+    console.log(this.data.title)
+
+  },
+  //添加天数
+  adddays:function(e){
+    var days = this.data.days;
+    this.setData({
+      days:e.detail.value
+    })
+  },
+  //上传 打卡数据
   changeIcon:function(e){
     var i = e.target.dataset.id;
     var srcList = this.data.list;
@@ -93,6 +122,7 @@ Page({
       selectIcon:selectIcon
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

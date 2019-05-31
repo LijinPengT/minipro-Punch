@@ -6,7 +6,8 @@
   <image src='../../../images/slices/bgimg1.png' mode='scaleToFill' ></image>
  
   <view class='program' wx:for="{{doneList}}" wx:key="*this">
-    <view class='kind inline-block width50'>
+    <view class='glass'></view>
+    <view class='zindex kind inline-block width50'>
       <view class='run inline-block' >
         <text>icon</text>
         {{item.head}}
@@ -15,7 +16,7 @@
         查看详情
       </view>
     </view>
-      <view class='count width50 inline-block'>{{item.Day}}</view>
+      <view class='zindex count width50 inline-block'>{{item.Day}}</view>
   </view>
   
 </view>

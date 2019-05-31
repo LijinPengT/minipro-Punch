@@ -19,7 +19,6 @@ button {
 .gray{
   filter: blur(2px);
   z-index: -1;
-
 }
 .card{
   border-radius: 8px;
@@ -41,10 +40,10 @@ button {
 .new{
   position: fixed;
   background-color: #fff;
-  bottom: 0;
-  left: 50%;transform: translateX(-50%);
+  top: 50%;
+  left: 50%;transform: translate(-50%,-50%);
   border-radius: 8px;
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 .head{
@@ -53,6 +52,7 @@ button {
   text-align: center;
   padding: 10px;
   position: relative;
+  font-weight: bold;
   color: #fff;
 }
 .head>image{
@@ -79,16 +79,36 @@ textarea{
   display: flex;
 }
 .submit{
-
+  border-bottom-left-radius: 8px;
   font-weight: bolder;
 }
 .cancle{
+  border-bottom-right-radius: 8px;
   font-weight: bolder;
   color: #707070;
   background-color: #eceaea;
-
 }
 .checked{
   transform: translateY(-5px);
 }
+image{
+  transition: 0.4s;
+}
 /* 进度条 */
+.progress{
+  width: 90%;
+  height: 10rpx;
+  border-radius: 4px;
+  border: 1px solid red;
+  position: absolute;
+  bottom: 4px;
+  left: 5%;
+}
+.inner{
+  position:absolute;
+  left: 0;
+  height: 100%;
+  border-radius: 4px;
+  background: #F25458;
+}
+

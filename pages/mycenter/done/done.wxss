@@ -14,10 +14,11 @@ image{
   border-radius: 20rpx;
   padding: 40rpx;
   margin: 30rpx auto;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(2px);
   background: rgba(0, 0, 0, 0.46);
   overflow: hidden;
 }
+
 .kind{
   float: left;
 
