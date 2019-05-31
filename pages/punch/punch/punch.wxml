@@ -1,11 +1,11 @@
 <!--pages/punch/punch/punch.wxml-->
-<view class='wrapper'>
+<view class='wrapper {{show == false ? "gray" : "white" }}' >
   <view>
     <button bindtap='toShowNew'  class='add'>+添加新的打卡</button>
   </view>
-  <view wx:for="{{list}}" bindtap='goDetails'>
+  <view wx:for="{{list}}" >
     <view class='card'>
-      <image src="{{item.src}}" style='height:100rpx;width:100rpx;' mode="aspectFit"></image>
+      <image bindtap='goDetails'  src="{{item.src}}" style='height:100rpx;width:100rpx;' mode="aspectFit"></image>
       <view>
         <text>{{item.pro}}</text>
         <view>
@@ -14,7 +14,7 @@
         </view>
       </view>
       
-      <image class='punched' style='height:100rpx;width:100rpx;'src="../../../images/slices/punched.png"></image>
+      <image bindtap='changeIcon' class='punched' data-id="{{item.id}}"style='height:100rpx;width:100rpx;'src="{{item.punchImg}}"></image>
     </view>
     
   </view>
@@ -31,13 +31,14 @@
     <input placeholder='标题'></input>
   </view>
   <view class='cu-form-group'>
-    <input placeholder='天数'></input>
+    <image bindtap='checked' class='{{item.clas}}' data-id='{{item.id}}' style='height:40rpx;width:40rpx;' wx:for="{{icon}}" src='{{item.src}}'></image>
   </view>
   <view class='cu-form-group'>
-    <input placeholder='打卡时长'></input>
+    <input placeholder='天数'></input>
   </view>
+  
   <view class='btnWrapper' bindtap='toShowNew'>
-  <button class='submit'>确认</button>
+  <button class='submit' bindtap='addNew'>确认</button>
   <button class='cancle'>取消</button>
   </view>
 </view>

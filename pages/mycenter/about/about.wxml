@@ -4,6 +4,7 @@
   <view class="head">关于我们</view>
   <view class="headIcon">
     <image class="miniIcon" src='../../../images/slices/fight.png'></image>
+    <image class='x' src='../../../images/slices/x.png'></image>
     <image class="flyIcon" src='../../../images/slices/Logo-01.png'></image>
   </view>
   <view class="intro">

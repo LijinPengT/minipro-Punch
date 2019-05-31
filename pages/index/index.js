@@ -38,9 +38,7 @@ Page({
         console.log(res.data);
         for(let i = 0; i < res.data.length;i++){
           res.data[i].content = res.data[i].things[0].content
-          console.log(res.data[i].things[0].content)
         }
-
         this.setData({
           pendList:res.data
         })
@@ -53,8 +51,12 @@ Page({
   toShow:function(){
     //点击事件
     var List = this.data.pendList;
-    List.unshift({content:'未定义',i:0})
-    console.log(List)
+    List.unshift({
+      content:'请输入'
+    })
+    for(let j = 0; j<List.length;j++){
+      List[j].i = j
+    }
     this.setData({
       pendList:List
     })
@@ -64,11 +66,9 @@ Page({
     console.log(i)
     var List = this.data.pendList;
     console.log(List)
-    // List[i].content = e.detail.value;
     this.setData({
-        pendList:List
+      pendList:List
     })
-
     wx.cloud.callFunction({
       // 云函数名称
       name: 'addTodos',

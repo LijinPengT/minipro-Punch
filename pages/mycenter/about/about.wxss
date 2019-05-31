@@ -19,4 +19,15 @@ page{
 }
 .headIcon{
   padding: 80rpx;
+  position: relative;
+  z-index: 2
+}
+.x{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-80%,-50%);
+  z-index: -1;
+  width: 60rpx;
+  height: 80rpx;
 }
