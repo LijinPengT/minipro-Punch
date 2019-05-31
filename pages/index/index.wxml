@@ -5,7 +5,7 @@
     <button  class='newPend' bindtap='toShow' >新建待办</button>
   <view wx:for="{{ pendList }}" wx:key="*this" >
     <view class='{{bgBar=="bgBar"?"bgBar":"punchedBar"}}' >
-      <input style='font-size:30rpx;' placeholder='{{item.content}}' data-id='{{item.i}}' bindblur='commitValue' ></input>
+      <input style='font-size:30rpx;' placeholder='{{item.things}}' data-id='{{item._id}}' bindblur='commitValue' ></input>
     </view>
     <view class='circle'></view>
     <!-- <view class='{{punchedBar}}' bindtap='select'>
