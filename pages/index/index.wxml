@@ -1,12 +1,15 @@
 <!--index.wxml-->
-
-<view style='padding:0px 10px;'>
+<image hidden='{{hidden}}' class='illustrator' src='../../../iamges/slices/illustrator.png' mode=''></image>
+<view class='wrapper' style='padding:0px 10px;'>
   <!-- <navigator url='/pages/creat/creat'> -->
     <button  class='newPend' bindtap='toShow' >新建待办</button>
-  <view wx:for="{{ pendList }}" wx:key="*this" >
-    <view class='{{bgBar=="bgBar"?"bgBar":"punchedBar"}}' >
-      <view style='font-size:30rpx;'  data-id='{{item._id}}'>{{item.things}}</view>
+  <view wx:for="{{ pendList }}" wx:key="*this" data-index='{{item.index}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style='transform:translateX({{item.slide}})' >
+
+    
+    <view   data-index='{{item.index}}' class='{{bgBar=="bgBar"?"bgBar":"punchedBar"}}' >
+      <view style='font-size:30rpx;'>{{item.things}}</view>
     </view>
+
     <view class='circle'></view>
     <!-- <view class='{{punchedBar}}' bindtap='select'>
       <text>{{item.content}}</text>
@@ -26,3 +29,4 @@
       <button class='form-btn' bindtap='cancle' >取消</button>
     </view>
   </view>
+

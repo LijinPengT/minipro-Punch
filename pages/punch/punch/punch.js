@@ -3,31 +3,23 @@ wx.cloud.init({
   env: 'ipunch-test-ya5fo'
 })
 const db = wx.cloud.database()
-
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    title:'',
-    //增加的标题
-    days:'30',
-    selectIcon:[],
-
+    
     icon:[{clas:'check',id:0,name:"看书",             src:"../../../images/slices/word.png"},
           {clas:'check',id:1,name:"减肥",              src:"../../../images/slices/vagetable.png"},
           {clas:'check',id:2,name:"跑步",             src:"../../../images/slices/shoe.png"},
           {clas:'check',id:3,name:"喝水",              src:"../../../images/slices/water.png"},
-          { clas: 'check', id: 4, name: "浇花", src: "../../../images/slices/flower.png" } ,
-          { clas: 'check', id: 5, name: "日记", src: "../../../images/slices/book.png" },
-          { clas: 'check', id: 6, name: "自定义", src: "../../../images/slices/add.png" }
+          {clas: 'check', id: 4, name: "浇花", src: "../../../images/slices/flower.png" } ,
+          {clas: 'check', id: 5, name: "日记", src: "../../../images/slices/book.png" },
+          {clas: 'check', id: 6, name: "自定义", src: "../../../images/slices/add.png" }
     ],
-    gary:'gary',
     show:true,
     //界面滤镜
-    process:'0',
-    //进度条
+    //渲染打卡列表
     list:[
       { 
         id:0,
@@ -36,38 +28,9 @@ Page({
         finishsrc: "../../../images/slices/finish.png",
         src:"../../../images/slices/word.png",
         today:'今日已成功打卡',
-        num:'30'},
-
-      { 
-        id:1,
-        punchImg:"../../../images/slices/punched.png",
-        pro: "背单词30个",
-         finishsrc: "../../../images/slices/finish.png",
-         src: "../../../images/slices/word.png",
-         today: '今日已成功打卡',
-         num: '30' },
-
-      { 
-        id:2,
-        punchImg:"../../../images/slices/punched.png",
-        pro: "背单词30个",
-         finishsrc: "../../../images/slices/finish.png",
-         src: "../../../images/slices/word.png",
-         today: '今日已成功打卡',
-         num: '30' }
+        num:'30'
+        }
     ]
-  },
-  //选择icon 动态
-  checked:function(e){
-    var i = e.target.dataset.id;
-    var list = this.data.icon;
-    var selectIcon = this.data.selectIcon;
-    selectIcon.unshift({src:list[i].src});
-    list[i].clas=list[i].clas =="checked"?"check":"checked";
-    this.setData({
-      selectIcon:selectIcon,
-      icon:list
-    })
   },
   //弹出框
   toShowNew:function(){
@@ -77,62 +40,93 @@ Page({
       show:!show
     })
   },
-  //添加 新的打卡   确认
-  addNew:function(){
-    var list =this.data.list;
-    let i = list.length;
-    let icon = this.data.selectIcon[0].src;
-    list.push({
-      id: i++,
-      punchImg: "../../../images/slices/punched.png",
-      pro: this.data.title,
-      finishsrc: "../../../images/slices/finish.png",
-      src: icon,
-      today: '今日已成功打卡',
-      num: this.data.days
-    })
-    this.setData({
-      list:list,
-      selectIcon:[]
-    })
-  },
+  
+  //--------------------
   // 添加标题
   addtitle:function(e){
-    var title = this.data.title;
-    console.log(e.detail.value);
-    this.setData({
-      title:e.detail.value
-    })
-    console.log(this.data.title)
-
+    // var title = this.data.title;
+    // console.log(e.detail.value);
+    // this.setData({
+    //   title:e.detail.value
+    // })
   },
   //添加天数
   adddays:function(e){
-    var days = this.data.days;
-    this.setData({
-      days:e.detail.value
-    })
+    // var days = this.data.days;
+    // this.setData({
+    //   days:e.detail.value
+    // })
   },
-  //上传 打卡数据
+  //选择icon
   changeIcon:function(e){
+    // var i = e.target.dataset.id;
+    // var srcList = this.data.list;
+    // var selectIcon = this.data.selectIcon;
+    // var icon = this.data.icon;
+    // console.log(icon)
+    // srcList[i].punchImg = srcList[i].finishsrc;
+    // this.setData({
+    //   list:srcList,
+    //   selectIcon:selectIcon
+    // })
+  },
+  //选择icon
+  checked: function (e) {
     var i = e.target.dataset.id;
-    var srcList = this.data.list;
+    var list = this.data.icon;
     var selectIcon = this.data.selectIcon;
-    var icon = this.data.icon;
-    
-    console.log(icon)
-    srcList[i].punchImg = srcList[i].finishsrc;
+    selectIcon.unshift({ src: list[i].src });
+    list[i].clas = list[i].clas == "checked" ? "check" : "checked";
     this.setData({
-      list:srcList,
-      selectIcon:selectIcon
+      selectIcon: selectIcon,
+      icon: list
     })
   },
-
+  //添加 新的打卡   提交
+  addNew: function () {
+    // var list = this.data.list;
+    // let i = list.length;
+    // let icon = this.data.selectIcon[0];
+    // console.log(icon)
+    // list.push({
+    //   id: i++,
+    //   punchImg: "../../../images/slices/punched.png",
+    //   pro: this.data.title,
+    //   finishsrc: "../../../images/slices/finish.png",
+    //   src: "../../../images/slices/word.png",
+    //   today: '今日未打卡',
+    //   num: this.data.days
+    // })
+    // this.setData({
+    //   list: list,
+    //   selectIcon: []
+    // })
+  },
+  //-----------------
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.getStorage({
+      key: 'openId',
+      success: (res)=> {
+        console.log(res.data)
+        this.setData({
+          openId:res.data//用户标识
+        })
+        db.collection("punchs").where({
+          
+        }).get({
+          success:(result)=>{
+            console.log(result)
+            this.setData({
+              list:result.data
+            })
+          }
+        })
+      },
+    });
+    console.log(this.data.list)
   },
   goDetails:function(){
     wx.navigateTo({
@@ -140,29 +134,11 @@ Page({
     })
   },
 
-  // 添加新的打卡数据到后台
+  // 添加新的打卡数据到本地
   formSubmit: function(e) {
-    let title = e.detail.value.title;
-    let aimTims = e.detail.value.punchTims;
-    let punchDays = e.detail.value.punchDays;
-    let process = 0;
-    let done = false;
-    let startDate = new Date();
-    let endDate = startDate.getDay() + aimTims;
-    wx.cloud.callFunction({
-      name: 'addPunchs',
-      data: {
-        title: title,
-        aimTiems: aimTims,
-        punchDays: punchDays,
-        process: process,
-        done: done,
-        startDate: startDate,
-        leftTimes: aimTims
-      }
-    }).then(res=>{
-      console.log('success')
-    })
+    console.log(e)
+    console.log(this.data.title)
+    
   },
 
   /**
