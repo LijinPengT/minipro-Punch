@@ -8,23 +8,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
-    icon:[{clas:'check',id:0,name:"看书",             src:"../../../images/slices/word.png"},
-          {clas:'check',id:1,name:"减肥",              src:"../../../images/slices/vagetable.png"},
-          {clas:'check',id:2,name:"跑步",             src:"../../../images/slices/shoe.png"},
-          {clas:'check',id:3,name:"喝水",              src:"../../../images/slices/water.png"},
-          {clas: 'check', id: 4, name: "浇花", src: "../../../images/slices/flower.png" } ,
-          {clas: 'check', id: 5, name: "日记", src: "../../../images/slices/book.png" },
-          {clas: 'check', id: 6, name: "自定义", src: "../../../images/slices/add.png" }
-    ],
+    //显示打卡添加
     show:true,
-    //界面滤镜
+    gray:'gray',//css样式
+    //新的打卡数据
+    newTag:{
+      title:'',
+      days:'',
+      times:'',
+      icons: [
+        { id: 0, name: "看书", src: "../../../images/slices/word.png", select: false },
+        { id: 1, name: "减肥", src: "../../../images/slices/vagetable.png", select: false },
+        { id: 2, name: "跑步", src: "../../../images/slices/shoe.png", select: false },
+        { id: 3, name: "喝水", src: "../../../images/slices/water.png", select: false },
+        { id: 4, name: "浇花", src: "../../../images/slices/flower.png", select: false },
+        { id: 5, name: "日记", src: "../../../images/slices/book.png", select: false },
+        { id: 6, name: "自定义", src: "../../../images/slices/add.png", select: false }
+      ],
+      singleIcon:''
+    },
     //渲染打卡列表
     list:[
       { 
         id:0,
         punchImg:"../../../images/slices/punched.png",
-        pro: "背单词30个",
+        title: "背单词30个",
         finishsrc: "../../../images/slices/finish.png",
         src:"../../../images/slices/word.png",
         today:'今日已成功打卡',
@@ -44,18 +52,20 @@ Page({
   //--------------------
   // 添加标题
   addtitle:function(e){
-    // var title = this.data.title;
-    // console.log(e.detail.value);
-    // this.setData({
-    //   title:e.detail.value
-    // })
+    let tag = this.data.newTag;
+    console.log(e.detail.value);
+    tag.title = e.detail.value;
+    this.setData({
+      newTag:tag
+    })
   },
   //添加天数
   adddays:function(e){
-    // var days = this.data.days;
-    // this.setData({
-    //   days:e.detail.value
-    // })
+    let tag = this.data.newTag;
+    tag.days = e.detail.value
+    this.setData({
+      newTag:tag
+    })
   },
   //选择icon
   changeIcon:function(e){
@@ -72,18 +82,45 @@ Page({
   },
   //选择icon
   checked: function (e) {
-    var i = e.target.dataset.id;
-    var list = this.data.icon;
-    var selectIcon = this.data.selectIcon;
-    selectIcon.unshift({ src: list[i].src });
-    list[i].clas = list[i].clas == "checked" ? "check" : "checked";
+    let i = e.target.dataset.id;
+    console.log('图标索引' + i);
+    let tag = this.data.newTag;
+    //选中图标---
+    tag.icons.forEach(item=>{ item.select = false; });
+    tag.icons[i].select = true;
+    tag.singleIcon = tag.icons[i].src;
+    console.log(tag.singleIcon)
+    //选中图标---
+    //添加图标
     this.setData({
-      selectIcon: selectIcon,
-      icon: list
+      newTag:tag
     })
   },
   //添加 新的打卡   提交
   addNew: function () {
+    let list = this.data.list;
+    let tag = this.data.newTag;
+
+    console.log(list)
+    console.log(this.data.list)
+    //将新的打卡添加到原有列表
+    list.push({
+      id: list.length,
+      title: tag.title,
+      punchImg: "../../../images/slices/punched.png",
+      finishsrc: "../../../images/slices/finish.png",
+      src: tag.singleIcon,
+      today: '今日未打卡',
+      num: tag.days
+    })
+    this.setData({
+      list:list
+    })
+    //本地数据
+    wx.setStorage({
+      key: 'list',
+      data: this.data.list,
+    })
     // var list = this.data.list;
     // let i = list.length;
     // let icon = this.data.selectIcon[0];
@@ -108,25 +145,34 @@ Page({
    */
   onLoad: function (options) {
     wx.getStorage({
-      key: 'openId',
+      key: 'list',
       success: (res)=> {
         console.log(res.data)
         this.setData({
-          openId:res.data//用户标识
-        })
-        db.collection("punchs").where({
-          
-        }).get({
-          success:(result)=>{
-            console.log(result)
-            this.setData({
-              list:result.data
-            })
-          }
-        })
+          list:res.data
+        });
       },
-    });
-    console.log(this.data.list)
+    })
+    // wx.getStorage({
+    //   key: 'openId',
+    //   success: (res)=> {
+    //     console.log(res.data)
+    //     this.setData({
+    //       openId:res.data//用户标识
+    //     })
+    //     db.collection("punchs").where({
+          
+    //     }).get({
+    //       success:(result)=>{
+    //         console.log(result)
+    //         this.setData({
+    //           list:result.data
+    //         })
+    //       }
+    //     })
+    //   },
+    // });
+
   },
   goDetails:function(){
     wx.navigateTo({
@@ -138,6 +184,7 @@ Page({
   formSubmit: function(e) {
     console.log(e)
     console.log(this.data.title)
+    console.log(this.data.list[0])
     
   },
 
