@@ -8,6 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //打卡图标
+    state: ["../../../images/slices/punched.png",             "../../../images/slices/finish.png"] ,
     //显示打卡添加
     show:true,
     gray:'gray',//css样式
@@ -36,7 +38,9 @@ Page({
         finishsrc: "../../../images/slices/finish.png",
         src:"../../../images/slices/word.png",
         today:'今日已成功打卡',
-        num:'30'
+        num:'30',
+        process: 10,
+        stamp:''//时间戳
         }
     ]
   },
@@ -69,7 +73,37 @@ Page({
   },
   //选择icon
   changeIcon:function(e){
-    // var i = e.target.dataset.id;
+    let i = e.target.dataset.id,
+        list =  this.data.list,//数据模型
+        state = "../../../images/slices/punched.png";
+    //点击后更改的   图标 并且不可以再次点击
+    if(list[i].punchImg === state){
+      list[i].process ++ ;
+      list[i].punchImg = list[i].finishsrc ;
+      list[i].today = "今日已打卡";
+      list[i].stamp = Date().split(" ")[2];
+      this.setData({//渲染页面
+        list : list
+      });
+      //更改本地存储
+      wx.setStorage({
+        key: 'list',
+        data: list,
+      })
+    }
+    //             进度
+    //             今日未打卡 变为 今日已成功打卡
+    //             设置时间戳getDate()
+    //直接更改本地的process  再重新渲染
+    // wx.getStorage({
+    //   key: 'list',
+    //   success: (res) =>{
+    //     res.data[i].process++;
+    //     this.setData({
+    //       list:res.data
+    //     });
+    //   },
+    // })
     // var srcList = this.data.list;
     // var selectIcon = this.data.selectIcon;
     // var icon = this.data.icon;
@@ -111,7 +145,9 @@ Page({
       finishsrc: "../../../images/slices/finish.png",
       src: tag.singleIcon,
       today: '今日未打卡',
-      num: tag.days
+      num: tag.days,
+      process:0,
+      stamp:""
     })
     this.setData({
       list:list
@@ -147,10 +183,20 @@ Page({
     wx.getStorage({
       key: 'list',
       success: (res)=> {
-        console.log(res.data)
+        console.log(res.data);
+        //本地存储可以更改
+        res.data.forEach(item =>{
+          if(item.today === "今日已打卡" &&
+             item.stamp == Date().split(" ")[2]){
+             item.punchImg = this.data.state[1];
+          }else{
+             item.today = "今日未打卡";
+             item.punchImg = this.data.state[0] ;
+          }
+        })
         this.setData({
-          list:res.data
-        });
+          list : res.data
+        })
       },
     })
     // wx.getStorage({
@@ -229,11 +275,11 @@ Page({
   onReachBottom: function () {
 
   },
-
+  
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 
-  }
+  },
 })

@@ -17,7 +17,7 @@
       <image bindtap='changeIcon' class='punched' data-id="{{item.id}}"style='height:80rpx;width:80rpx;'src="{{item.punchImg}}"></image>
       <!-- 进度条 -->
       <view class='progress'>
-        <view style='width:{{process}};'  class='inner'></view>
+        <view style='width:{{(item.process/item.num)*100 + "%"}};'  class='inner'></view>
       </view>
     </view>
     
