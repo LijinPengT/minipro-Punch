@@ -8,15 +8,15 @@
   <view class='program' bindtap='viewBindTap' wx:for="{{doneList}}" wx:key="*this">
     <view class='glass'></view>
     <view class='zindex kind inline-block width50'>
-      <view class='run inline-block' >
-        <text>icon</text>
-        {{item.head}}
+      <view class='run inline-block' style ="position:relative;" >
+      {{item.title}}
+        <!-- <image style='position:relative;  height:40rpx;width:40rpx;' src="{{item.src}}"></image> -->
       </view>
       <view style='font-size:10px;' class='width50'>
         查看详情
       </view>
     </view>
-      <view class='zindex count width50 inline-block'>{{item.Day}}</view>
+      <view class='zindex count width50 inline-block'>{{item.num}}</view>
   </view>
   
 </view>

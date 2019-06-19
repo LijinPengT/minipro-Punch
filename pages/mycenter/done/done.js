@@ -8,17 +8,7 @@ Page({
    */
   data: {
     doneList:[
-      {
-        Day: '30天',
-        head: '跑步'},
-      {
-        Day: '30天',
-        head: '跑步'
-      },
-      {
-        Day: '30天',
-        head: '跑步'
-      }
+
     ]
     ,
     con_height:0,
@@ -30,20 +20,17 @@ Page({
    */
   onLoad: function (options) {
     //初始化界面
-    var that = this;
-    wx.getSystemInfo({
-      success:function(res){
-        console.log(res)
-        let width = res.windowWidth;
-        let height = res.windowHeight;
-        that.setData({
-          con_height:height,
-          con_width:width
+    wx.getStorage({
+      key: 'done',
+      success: (res)=> {
+        console.log(res.data[0].src)
+        this.setData({
+          doneList:res.data
+
         })
-      }
+      },
     })
-  //获取完成事件
-    // db.collection('punchs').doc
+    
   },
   viewBindTap:function(){
     wx.navigateTo({

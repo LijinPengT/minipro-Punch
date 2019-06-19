@@ -31,17 +31,7 @@ Page({
     },
     //渲染打卡列表
     list:[
-      { 
-        id:0,
-        punchImg:"../../../images/slices/punched.png",
-        title: "背单词30个",
-        finishsrc: "../../../images/slices/finish.png",
-        src:"../../../images/slices/word.png",
-        today:'今日已成功打卡',
-        num:'30',
-        process: 10,
-        stamp:''//时间戳
-        }
+      
     ]
   },
   //弹出框
@@ -78,10 +68,16 @@ Page({
         state = "../../../images/slices/punched.png";
     //点击后更改的   图标 并且不可以再次点击
     if(list[i].punchImg === state){
-      list[i].process ++ ;
+      list[i].stamp = Date().split(" ")[2] ;
       list[i].punchImg = list[i].finishsrc ;
-      list[i].today = "今日已打卡";
-      list[i].stamp = Date().split(" ")[2];
+      list[i].process ++ ;
+      //如果已完成
+      if(list[i].process == list[i].num){
+        list[i].today = "已完成";
+        list[i].done = true;
+      }else{
+        list[i].today = "今日已打卡";
+      };
       this.setData({//渲染页面
         list : list
       });
@@ -180,12 +176,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let done = [],
+        index = 0;
+    
     wx.getStorage({
       key: 'list',
       success: (res)=> {
-        console.log(res.data);
-        //本地存储可以更改
+        res.data.forEach(item => {
+          if(item.done === true){
+            done.push(item);//已完成添加
+            res.data.splice(item.id,1);//删除此项
+          }
+        })
+        //确认每一项今天是否可以打卡
         res.data.forEach(item =>{
+          item.id = index++;
           if(item.today === "今日已打卡" &&
              item.stamp == Date().split(" ")[2]){
              item.punchImg = this.data.state[1];
@@ -194,11 +199,22 @@ Page({
              item.punchImg = this.data.state[0] ;
           }
         })
+        // 更新本地
+        wx.setStorage({
+          key: 'list',
+          data: res.data,
+        })
+        wx.setStorage({
+          key: 'done',
+          data: done,
+        })
+        // 更新列表
         this.setData({
           list : res.data
         })
       },
-    })
+    });
+    
     // wx.getStorage({
     //   key: 'openId',
     //   success: (res)=> {
