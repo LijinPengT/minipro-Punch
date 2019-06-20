@@ -2,7 +2,7 @@
 wx.cloud.init({
   env: 'ipunch-test-ya5fo'
 })
-const db = wx.cloud.database()
+const db = wx.cloud.database();
 Page({
   /**
    * 页面的初始数据
@@ -32,7 +32,10 @@ Page({
     //渲染打卡列表
     list:[
       
-    ]
+    ],
+    touchMove:{
+      
+    }
   },
   //弹出框
   toShowNew:function(){
@@ -176,18 +179,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let done = [],
-        index = 0;
-    
-    wx.getStorage({
+    let index = 0;
+    //获取之前的本地打卡
+    wx.getStorage({//页面加载时看到已完成添加到done
       key: 'list',
       success: (res)=> {
+        // -----
         res.data.forEach(item => {
           if(item.done === true){
-            done.push(item);//已完成添加
+            // done.push(item);//已完成添加
             res.data.splice(item.id,1);//删除此项
           }
         })
+        // -----
         //确认每一项今天是否可以打卡
         res.data.forEach(item =>{
           item.id = index++;
@@ -200,14 +204,10 @@ Page({
           }
         })
         // 更新本地
-        wx.setStorage({
-          key: 'list',
-          data: res.data,
-        })
-        wx.setStorage({
-          key: 'done',
-          data: done,
-        })
+        // wx.setStorage({
+        //   key: 'list',
+        //   data: res.data,
+        // })
         // 更新列表
         this.setData({
           list : res.data

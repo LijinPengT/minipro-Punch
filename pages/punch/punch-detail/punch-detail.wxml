@@ -10,7 +10,6 @@
     <view class='hr'></view>
     <view class='form-item'><view>结束日期</view><text>{{endDate}}</text></view>
     <view class='hr'></view>
-    <view class='form-item'><view>剩余次数</view><text>{{leaveDays}}</text></view>
   </view>
   <view class='form finish'>
     <view class='form-item'><view class='in-item'>打卡次数</view><text>{{punchTimes}}</text></view>

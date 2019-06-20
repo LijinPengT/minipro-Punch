@@ -21,13 +21,19 @@ Page({
   onLoad: function (options) {
     //初始化界面
     wx.getStorage({
-      key: 'done',
+      key: 'list',
       success: (res)=> {
-        console.log(res.data[0].src)
-        this.setData({
-          doneList:res.data
-
-        })
+        let done = [];
+        if(res.data.length !==0){
+          res.data.forEach(item=>{
+            if(item.done === true){
+              done.push(item);
+            };
+          });
+          this.setData({
+            doneList: done
+          })
+        }
       },
     })
     

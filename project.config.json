@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -123,6 +123,13 @@
 					"id": -1,
 					"name": "主页",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "打卡详情",
+					"pathName": "pages/punch/punch-detail/punch-detail",
 					"scene": null
 				}
 			]

@@ -3,7 +3,7 @@
   <view>
     <button bindtap='toShowNew'  class='add'>+添加新的打卡</button>
   </view>
-  <view wx:for="{{list}}" >
+  <view wx:for="{{list}}"  >
     <view class='card'>
       <image src="{{item.src}}" style='height:80rpx;width:80rpx;' mode="aspectFit"></image>
       <view  class='transright' bindtap='goDetails'>

@@ -13,7 +13,15 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+let getLocalList = list => {
+  wx.getStorage({
+    key: 'list',
+    success: (res)=> {
+      return res.data
+    },
+  })
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getLocalLIst:getLocalLIst
 }
