@@ -1,7 +1,7 @@
 
 /* pages/punch/punch-detail/punch-detail.wxss */
 .calendar {
-    background-color: #eceaea;
+    background-color: #eeedff;
     padding-top: 10px;
 }
 .header {
@@ -10,7 +10,7 @@
 }
 .board {
     background-color: #70707025;
-    color: #707070;
+    color: #dddcff;
 }
 .form {
   background: #ffffff;

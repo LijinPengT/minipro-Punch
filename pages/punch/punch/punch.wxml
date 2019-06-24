@@ -6,7 +6,7 @@
   <view wx:for="{{list}}"  >
     <view class='card'>
       <image src="{{item.src}}" style='height:80rpx;width:80rpx;' mode="aspectFit"></image>
-      <view  class='transright' bindtap='goDetails'>
+      <view  class='transright' data-id="{{item.id}}" bindtap='goDetails'>
         <text >{{item.title}}</text>
         <view class='transtop' >
           <text style='font-size:20rpx;margin-right:30rpx;'>目标{{item.num}}次</text>
